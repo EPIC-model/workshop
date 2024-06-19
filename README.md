@@ -1,6 +1,10 @@
 Welcome to the EPIC workshop in Trieste!
 ========================================
 
+How to connect to the system
+----------------------------
+For further details please visit https://docs.cirrus.ac.uk/user-guide/connecting/.
+
 How to load the EPIC environment
 --------------------------------
 After logging into Cirrus, we load the environment with the following commands:
