@@ -1,7 +1,7 @@
 #!/bin/bash
 
+# specify where to download and install (please do not change)
 WORK_DIR="/work/d185/d185/$USER"
-
 PREFIX="${WORK_DIR}/epic"
 SRC_DIR="${WORK_DIR}/source"
 
@@ -15,7 +15,8 @@ module load libtool
 
 # ensure EPIC is able to find MPI
 if [[ "$MPI_DIR" == "" ]]; then
-   export MPI_DIR=/work/y07/shared/cirrus-software/openmpi/4.1.6
+    mpi_compiler=$(which mpif90)
+    export MPI_DIR=${mpi_compiler%/*/*}
 fi
 
 # download source
@@ -24,10 +25,10 @@ cd $SRC_DIR
 git clone https://github.com/EPIC-model/epic.git
 
 # configure
-cd epic
+cd "$SRC_DIR/epic"
 ./bootstrap
-mkdir -p build
-cd build
+mkdir -p "$SRC_DIR/epic/build"
+cd "$SRC_DIR/epic/build"
 $SRC_DIR/epic/configure \
     --enable-verbose    \
     --enable-3d         \
