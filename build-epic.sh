@@ -2,7 +2,7 @@
 
 WORK_DIR="/work/d185/d185/$USER"
 
-PREFIX="${WORK_DIR}/epic-install"
+PREFIX="${WORK_DIR}/epic"
 SRC_DIR="${WORK_DIR}/source"
 
 # load necessary modules
