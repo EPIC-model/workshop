@@ -1,7 +1,7 @@
 Welcome to the EPIC workshop in Trieste!
 ========================================
 
-This repository serves as a tutorial in order to run and analyse a moist bubble simulation using the [Elliptical Parcel-in-Cell method](https://doi.org/10.1016/j.jcpx.2023.100136). We provide you temporary access to the Cirrus system, a Tier-2 system of the EPSRC. All information how to access the system is provided [here](system_access.md).
+This repository serves as a tutorial in order to run and analyse a moist bubble simulation using the [Elliptical Parcel-in-Cell method](https://doi.org/10.1016/j.jcpx.2023.100136). We provide you temporary access to the Cirrus cluster, a Tier-2 system of the EPSRC. All information how to access the system is provided [here](system_access.md).
 
 How to load the EPIC environment
 --------------------------------
