@@ -1,9 +1,7 @@
 Welcome to the EPIC workshop in Trieste!
 ========================================
 
-How to connect to the system
-----------------------------
-For further details please visit https://docs.cirrus.ac.uk/user-guide/connecting/.
+Information how to access the system is provided [here](system_access.md).
 
 How to load the EPIC environment
 --------------------------------
