@@ -18,7 +18,7 @@ If you would like to test the installation of EPIC, you can try out this [build 
 
 How to load the Python virtual environment
 ------------------------------------------
-You can load the pre-installed virtual environment using the subsequent commands:
+You can prepare the input to EPIC and analyse its output using our tools written in Python. For this purpose, you first need to load the virtual environment by typing the subsequent commands:
 ```bash
 module load python/3.9.13
 CONDA_ROOT=/work/d185/d185/shared/condaenvs
