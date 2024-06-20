@@ -1,24 +1,26 @@
 # Welcome to the EPIC workshop in Trieste!
 
-This repository serves as a tutorial to show you how to prepare, run and analyse a moist bubble simulation using the [Elliptical Parcel-In-Cell (EPIC)](https://doi.org/10.1016/j.jcpx.2023.100136) method. During the course of this workshop (July 8th 2024), we provide you temporary access to the Cirrus cluster, a Tier-2 system of the EPSRC. All information how to access Cirrus is provided [here](system_access.md). If you would like to work on your own laptop, feel free to do so. However, we might not be able to help you in case you face any issues regarding code compilation (not necessarily EPIC!).
+This repository serves as a tutorial to show you how to prepare, run and analyse a moist bubble simulation using the [Elliptical Parcel-In-Cell (EPIC)](https://doi.org/10.1016/j.jcpx.2023.100136) method. During the course of this workshop (July 8th 2024), we provide you temporary access to the Cirrus cluster, a Tier-2 system of the EPSRC. All information how to access Cirrus is provided below. If you would like to work on your own laptop, feel free to do so. However, we might not be able to help you in case you face any issues regarding code compilation (not necessarily EPIC!).
 
 ### Table of Contents
 - [Prerequisites](#prerequisites)
-- [How to access the Cirrus cluster](#how-to-access-the-cirrus-cluster)
+  - [Accessing the Cirrus cluster](#accessing-the-cirrus-cluster)
+  - [Obtaining all resources](#obtaining-all-resources)
 - [How to load the EPIC environment](#how-to-load-the-epic-environment)
 - [How to load the Python virtual environment](#how-to-load-the-python-virtual-environment)
 
-### How to access the Cirrus cluster
+## Prerequisites
+### Accessing the Cirrus cluster
 For further details please visit https://docs.cirrus.ac.uk/user-guide/connecting/.
 
-### Prerequisites
+### Obtaining all resources
 Before you start, you must clone this repository to your working directory on Cirrus. You can do this by
 ```bash
 cd /work/d185/d185/$USER
 git clone https://github.com/EPIC-model/workshop-trieste.git
 ```
 
-### How to load the EPIC environment
+## How to load the EPIC environment
 In order to simplify your task, we have pre-installed a working EPIC executable. After logging into Cirrus, you can load the environment with the following commands:
 ```bash
 module use /work/d185/d185/shared/modules
@@ -30,7 +32,7 @@ module load epic
 ```
 If you would like to test the installation of EPIC, you can try out this [build script](build-epic.sh). For this purpose, you would not load the EPIC module (last command). If you want to try on your own laptop, you may have noticed that EPIC requires a working gfortran compiler, MPI and a netCDF (requires HDF5) installation.
 
-### How to load the Python virtual environment
+## How to load the Python virtual environment
 You can prepare the input to EPIC and analyse its output using our tools written in Python. For this purpose, you first need to load the virtual environment by typing the subsequent commands:
 ```bash
 module load python/3.9.13
