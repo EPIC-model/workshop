@@ -8,6 +8,9 @@ This repository serves as a tutorial to show you how to prepare, run and analyse
 - [How to load the EPIC environment](#how-to-load-the-epic-environment)
 - [How to load the Python virtual environment](#how-to-load-the-python-virtual-environment)
 
+### How to access the Cirrus cluster
+For further details please visit https://docs.cirrus.ac.uk/user-guide/connecting/.
+
 ### Prerequisites
 Before you start, you must clone this repository to your working directory on Cirrus. You can do this by
 ```bash
