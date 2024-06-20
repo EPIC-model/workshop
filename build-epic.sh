@@ -1,18 +1,9 @@
 #!/bin/bash
 
-if [[ "$PREFIX" == "" ]]; then
-    echo "Missing 'PREFIX' environment variable. Please set this variable."
-    return
-fi
+WORK_DIR="/work/d185/d185/$USER"
 
-if [[ "$SRC_DIR" == "" ]]; then
-    echo "Missing 'SRC_DIR' environment variable. Please set this variable."
-    return
-fi
-
-if [[ "$MPI_DIR" == "" ]]; then
-   export MPI_DIR=/work/y07/shared/cirrus-software/openmpi/4.1.6
-fi
+PREFIX="${WORK_DIR}/epic-install"
+SRC_DIR=${WORK_DIR}
 
 mkdir -p "$SRC_DIR"
 
@@ -24,8 +15,16 @@ module load hdf5-epic
 module load netcdf-epic
 module load libtool
 
+# ensure EPIC is able to find MPI
+if [[ "$MPI_DIR" == "" ]]; then
+   export MPI_DIR=/work/y07/shared/cirrus-software/openmpi/4.1.6
+fi
+
+# download source
 cd $SRC_DIR
 git clone https://github.com/EPIC-model/epic.git
+
+# configure
 cd epic
 ./bootstrap
 mkdir -p build
@@ -35,5 +34,6 @@ $SRC_DIR/epic/configure \
     --enable-3d         \
     --prefix=${PREFIX}
 
+# compile
 make
 make install
