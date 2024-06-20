@@ -14,7 +14,7 @@ module load hdf5-epic
 module load netcdf-epic
 module load epic
 ```
-If you would like to test the installation of EPIC, you can try out this [build script](build-epic.sh).
+If you would like to test the installation of EPIC, you can try out this [build script](build-epic.sh). For this purpose, you would not load the EPIC module (last command). If you want to try on your own laptops, you will have noticed that EPIC requires a working gfortran compiler, MPI and netCDF (netCDF requires HDF5).
 
 How to load the Python virtual environment
 ------------------------------------------
