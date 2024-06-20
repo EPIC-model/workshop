@@ -5,8 +5,6 @@ WORK_DIR="/work/d185/d185/$USER"
 PREFIX="${WORK_DIR}/epic-install"
 SRC_DIR=${WORK_DIR}
 
-mkdir -p "$SRC_DIR"
-
 # load necessary modules
 module use /work/d185/d185/shared/modules
 module load gcc/10.2.0
