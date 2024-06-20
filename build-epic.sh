@@ -3,7 +3,7 @@
 WORK_DIR="/work/d185/d185/$USER"
 
 PREFIX="${WORK_DIR}/epic-install"
-SRC_DIR=${WORK_DIR}
+SRC_DIR="${WORK_DIR}/source"
 
 # load necessary modules
 module use /work/d185/d185/shared/modules
@@ -19,6 +19,7 @@ if [[ "$MPI_DIR" == "" ]]; then
 fi
 
 # download source
+mkdir -p "$SRC_DIR"
 cd $SRC_DIR
 git clone https://github.com/EPIC-model/epic.git
 
