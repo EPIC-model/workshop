@@ -68,7 +68,14 @@ export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
 A base EPIC configuration file is given in [input/moist.config](input/moist.config). The input data is provided by the `field_file` argument.
 
 ### Run simulation
-Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh).
+Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
+```bash
+sbatch submit-job.sh
+```
+You can check the status of your submitted jobs with
+```bash
+squeue -u $USER
+```
 
 ### Analyse output
 EPIC generates a bunch of output files. Here, we focus on the Eulerian and Lagrangian diagnostic files.
