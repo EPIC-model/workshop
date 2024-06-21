@@ -65,8 +65,10 @@ export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/tools
 ## Moist bubble test case
 
 ### Prepare input
+A base EPIC configuration file is given in [input/moist.config](input/moist.config). The input data is provided by the `field_file` argument.
 
 ### Run simulation
 Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh).
 
 ### Analyse output
+EPIC generates a bunch of output files. Here, we focus on the Eulerian and Lagrangian diagnostic files.
