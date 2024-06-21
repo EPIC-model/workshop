@@ -43,7 +43,7 @@ If you would like to test the installation of EPIC, you can try out this [build 
 ```bash
 module load ncview-epic
 ```
-
+Note that you must be logged in with the flag `-X` in order to run ncview.
 
 ***
 ## How to load the Python virtual environment
