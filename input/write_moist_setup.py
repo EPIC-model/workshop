@@ -160,11 +160,11 @@ try:
                     if z < z_b:
                         # Mixed layer
                         buoy[k, j, i] = 0.0
-                        humidity[k, j, i] = h_bg
+                        hum[k, j, i] = h_bg
                     else:
                         # Stratified layer
                         buoy[k, j, i] = dbdz * (z - z_b)
-                        humidity[k, j, i] = q0 * RH * np.exp(-z / height_c)
+                        hum[k, j, i] = q0 * RH * np.exp(-z / height_c)
 
 
 
@@ -173,13 +173,13 @@ try:
     ncf.open('moist_' + str(nx) + 'x' + str(ny) + 'x' + str(nz) + '.nc')
 
     # write all provided fields
-    ncf.add_dataset('buoyancy', buoy, unit='m/s^2')
+    ncf.add_field('buoyancy', buoy, unit='m/s^2')
 
-    ncf.add_dataset('humidity', hum, unit='1')
+    ncf.add_field('humidity', hum, unit='1')
 
-    ncf.add_dataset('x_vorticity', xi,   unit='1/s')
-    ncf.add_dataset('y_vorticity', eta,  unit='1/s')
-    ncf.add_dataset('z_vorticity', zeta, unit='1/s')
+    ncf.add_field('x_vorticity', xi,   unit='1/s')
+    ncf.add_field('y_vorticity', eta,  unit='1/s')
+    ncf.add_field('z_vorticity', zeta, unit='1/s')
 
     # write physical constants
     ncf.add_physical_quantity('gravity', gravity)
