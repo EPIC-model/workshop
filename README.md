@@ -66,6 +66,30 @@ export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
 
 ***
 ## Moist bubble test case
+In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$ distribution inside the moist bubble are given by
+```math
+\begin{align}
+    b_{l}(\vec{x}') &= b_{\circ}
+                     \left(
+                         1 + \frac{0.3 x'y' -0.4 x'z' + 0.5 y'z'}{R^2}
+                     \right)
+                     S(h) \\
+    q(\vec{x}') &= q_n + (q_{\circ}-q_n)S(h)\,,
+\end{align}
+```
+with edge-smoothing function
+```math
+S(h) =
+\left\{
+\begin{align}
+1 &{}\qquad h \leq 0 \\
+1 - 10 h^3 + 15 h^4 - 6 h^5 &{}\qquad 0 < h < 1 \\
+0 &{}\qquad h \geq 1
+\end{align}
+\right.
+```
+and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$.
+
 
 ### Prepare input
 A base EPIC configuration file is given in [input/moist.config](input/moist.config). The input data is provided by the `field_file` argument.
