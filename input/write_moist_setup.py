@@ -12,7 +12,7 @@ try:
         "--ngrid",
         type=int,
         required=False,
-        default=32,
+        default=54,
         help="number of grid cells per dimension",
     )
 
@@ -46,9 +46,9 @@ try:
     extent = np.array([6280., 6280., 6280.])
 
     # number of grid cells in each dimension
-    nx = 64
-    ny = 64
-    nz = 64
+    nx = ngrid
+    ny = ngrid
+    nz = ngrid
 
     # generate data
     if RH > 1.0:
