@@ -67,5 +67,6 @@ export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/tools
 ### Prepare input
 
 ### Run simulation
+Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh).
 
 ### Analyse output
