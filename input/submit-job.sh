@@ -24,4 +24,4 @@ cd $SLURM_SUBMIT_DIR
 export OMP_NUM_THREADS=1
 
 # Launch the parallel job:
-srun epic3d --config
+srun --kill-on-bad-exit epic3d --config moist.config
