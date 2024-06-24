@@ -98,7 +98,7 @@ The basic command to run a three-dimensional EPIC simulation is
 epic3d --config [config.file]
 ```
 where in `config.file` all simulation parameters are defined. The configuration file for the moist bubble case is given in [input/moist.config](input/moist.config). The gridded input data is provided in a netCDF file and passed to EPIC
-via the `field_file` argument. Besides the gridded fields, the netCDF file also contains domain specifications and physical quantities. We provide you all the necessary tools to create such input data. You must therefore load the Python virtual environmnent installed on Cirrus following the instructions given in the previous previous section on [how to load the Python virtual environment](#how-to-load-the-python-virtual-environment).
+via the `field_file` argument. Besides the gridded fields, the netCDF file also contains domain specifications and physical quantities. We provide you all the necessary tools to create such input data. You must therefore load the Python virtual environmnent installed on Cirrus following the instructions given in the previous section on [how to load the Python virtual environment](#how-to-load-the-python-virtual-environment). A script to generate the input data for the moist bubble test case is already provided in [input/write_moist_setup.py](input/write_moist_setup.py).
 
 ### Run simulation
 Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
