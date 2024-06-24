@@ -2,14 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tools.nc_reader import nc_reader
 import matplotlib as mpl
-from mpl_toolkits.axes_grid1 import ImageGrid
 from tools.utils import *
 from tools.mpl_style import *
 import argparse
 import os
 from tools.mpl_beautify import *
 import matplotlib as mpl
-import colorcet as cc
 
 try:
     parser = argparse.ArgumentParser(
@@ -47,7 +45,7 @@ try:
     z = ncr.get_all('z')
 
 
-    fig, axs = plt.subplots(nrows=1, ncols=5, figsize=(12, 3), dpi=200, sharey=True)
+    fig, axs = plt.subplots(nrows=1, ncols=6, figsize=(16, 4), dpi=200, sharey=True)
 
     mpl.rcParams['lines.linewidth'] = 1.5
     mpl.rcParams['font.size'] = 14
@@ -58,28 +56,23 @@ try:
 
         prof = data.mean(axis=(0, 1))
 
-        if j == 2:
-            label = labels[i]
-        else:
-            label = None
+        axs[j].plot(prof, z, color='blue')
 
-        axs[j].plot(prof, z, color=colors[i], label=label)
-
-        if i == 0:
-            axs[j].grid(linestyle='dashed', zorder=-2)
-            axs[j].set_xlabel(r'xy-mean of ' + dset)
-            if j == 0:
-                axs[j].set_ylabel(r'$z$')
-            add_timestamp(axs[j], t[step], xy=(0.03, 1.06), fmt="%.1f")
+        axs[j].grid(linestyle='dashed', zorder=-2)
+        if j == 0:
+            axs[j].set_ylabel(r'$z$')
+        add_timestamp(axs[j], t[step], xy=(0.03, 1.06), fmt="%.1f")
 
         if j > 0:
             remove_yticks(axs[j])
 
+    # 24 June 2024
+    # https://stackoverflow.com/a/7066293
+    fig.suptitle(r'Height profile of horizontal ' + ncr.get_label(dset) + ' mean', y=1.10)
+
     ncr.close()
 
-    axs[2].legend(loc='upper center', bbox_to_anchor=(0.5, 1.34), ncols=2)
-
-    plt.savefig(dset + '_mean_profile.pdf', bbox_inches='tight')
+    plt.savefig(dset + '_mean_profile.png', dpi=200, bbox_inches='tight')
     plt.close()
 
 except Exception as ex:
