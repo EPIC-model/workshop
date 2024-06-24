@@ -20,7 +20,7 @@ try:
     parser.add_argument(
         '--filename',
         type=str,
-        help='parcel file path and file name')
+        help='field file path and file name')
 
     parser.add_argument(
         '--steps',
@@ -43,7 +43,7 @@ try:
         choices=planes,
         default='xz',
         help='orientation')
-    
+
     parser.add_argument(
         '--loc',
         type=int,
@@ -60,7 +60,7 @@ try:
         choices=[None, 'centered', 'log', 'symlog'],
         default=None,
         help="colour map norm")
-        
+
 
     args = parser.parse_args()
 
@@ -85,7 +85,7 @@ try:
 
     if loc is None:
         loc = int(ncells[i] / 2)
-    
+
     if (loc < 0) or (loc > ng):
         raise ValueError("Location outside bounds.")
 
