@@ -1,4 +1,3 @@
-# python extract_intersected_ellipses.py --filename moist_0000000012_parcels.nc --step 12 --plane xz --loc 128
 import argparse
 from tools.nc_reader import nc_reader
 from tools.nc_parcels import nc_parcels
@@ -7,7 +6,9 @@ import os
 
 try:
     parser = argparse.ArgumentParser(
-        description="Extract intersected ellipses."
+        description="Extracts all ellipses that result from the intersection of " \
+        "ellipsoids with a plane. The plane can be either xz, xy or yz. The position " \
+        "'--loc' of the intersection point is specified in the form of grid points."
     )
 
     parser.add_argument(
@@ -41,6 +42,9 @@ try:
 
     if not os.path.exists(args.filename):
         raise IOError("File '" + args.filename + "' does not exist.")
+
+    if not args.dataset:
+        raise ValueError("Please select a parcel quantity with the option '--dataset'")
 
     ncr = nc_reader()
 
