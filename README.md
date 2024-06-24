@@ -18,9 +18,9 @@ This repository serves as a tutorial to show you how to prepare, run and analyse
 ***
 
 ## Prerequisites
-#### Accessing the Cirrus cluster
+### Accessing the Cirrus cluster
 
-##### Summary:
+#### Summary:
   * Create SSH key-pair
   * Create SAFE account
   * Accept invite to `d185`, you will need to add the public part of an SSH key-pair to the `d185` machine account in SAFE when accepting the invite
@@ -29,7 +29,7 @@ This repository serves as a tutorial to show you how to prepare, run and analyse
   * The first time you login, you'll be asked to type your password (you can get it from SAFE) and then change it.
   * From them on, you'll use the TOTP/MFA code, which only be asked once a day (unless your IP changes, then you'll be asked for another TOTP)
 
-##### Detailed Instructions:
+#### Detailed Instructions:
 
 The steps below will also be sent to your email, with the invite to join the `d185` project.
 
