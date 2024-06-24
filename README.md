@@ -93,7 +93,11 @@ and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius
 
 
 ### Prepare input
-A base EPIC configuration file is given in [input/moist.config](input/moist.config). The input data is provided by the `field_file` argument.
+The basic command to run a three-dimensional EPIC simulation is
+```bash
+epic3d --config [fonfig.file]
+```
+where `config.file` is a configuration file which defines all simulation parameters. The configuration for the moist bubble case is given in [input/moist.config](input/moist.config). The input data is provided by the `field_file` argument.
 
 ### Run simulation
 Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
