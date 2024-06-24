@@ -97,7 +97,8 @@ The basic command to run a three-dimensional EPIC simulation is
 ```bash
 epic3d --config [config.file]
 ```
-where `config.file` defines all simulation parameters. The configuration for the moist bubble case is given in [input/moist.config](input/moist.config). The input data is provided by the `field_file` argument.
+where in `config.file` all simulation parameters are defined. The configuration file for the moist bubble case is given in [input/moist.config](input/moist.config). The gridded input data is provided in a netCDF file and passed to EPIC
+via the `field_file` argument. Besides the gridded fields, the netCDF file also contains domain specifications and physical quantities.
 
 ### Run simulation
 Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
