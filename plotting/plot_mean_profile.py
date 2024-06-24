@@ -67,7 +67,7 @@ try:
 
         if i == 0:
             axs[j].grid(linestyle='dashed', zorder=-2)
-            axs[j].set_xlabel(r'$\langle\bar{b}\rangle$')
+            axs[j].set_xlabel(r'xy-mean of ' + dset)
             if j == 0:
                 axs[j].set_ylabel(r'$z$')
             add_timestamp(axs[j], t[step], xy=(0.03, 1.06), fmt="%.1f")
