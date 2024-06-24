@@ -32,6 +32,16 @@ class nc_base_reader(ABC):
     def get_box_origin(self, **kwargs):
         pass
 
+    def get_label(self, name):
+        if not name in self._ncfile.variables.keys():
+            raise IOError("Dataset '" + name + "' unknown.")
+        return self._ncfile[name].long_name
+
+    def get_units(self, name):
+        if not name in self._ncfile.variables.keys():
+            raise IOError("Dataset '" + name + "' unknown.")
+        return self._ncfile[name].units
+
     @abstractmethod
     def get_dataset(self, step, name, **kwargs):
         if not name in self._ncfile.variables.keys():
