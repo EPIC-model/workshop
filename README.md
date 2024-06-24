@@ -88,7 +88,8 @@ S(h) =
 \end{align}
 \right.
 ```
-and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$.
+and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$. For further information about the example, read section 3.4 in
+[Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
 
 
 ### Prepare input
