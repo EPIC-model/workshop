@@ -5,7 +5,7 @@ import argparse
 
 try:
     parser = argparse.ArgumentParser(
-        description="Write parcels for moist setup."
+        description="Generate gridded input data for the moist bubble setup."
     )
 
     parser.add_argument(
