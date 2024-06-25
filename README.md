@@ -173,15 +173,14 @@ by the number of grid cells per dimension (default: `nx = ny = nz = 64`). You ca
 with the `--help` argument to get further information.
 
 ### How to run a simulation
-> [!IMPORTANT]
-> Our resources for this workshop are limited, so we kindly ask users to only use a
-> maximum of 1 computing node per job. In addition, jobs should not run longer than 20 minutes.
-
 Cirrus uses the SLURM job scheduling system. To run a simulation please use the provided
 [batch script](input/submit-job.sh). A job is submitted with
 ```bash
 sbatch submit-job.sh
 ```
+> [!IMPORTANT]
+> Our resources for this workshop are limited, so we kindly ask users to only use a
+> maximum of 1 computing node per job. In addition, jobs should not run longer than 20 minutes.
 
 > [!TIP]
 > You can check the status of your submitted jobs with
