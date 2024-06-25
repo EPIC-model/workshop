@@ -216,12 +216,7 @@ string that is passed to EPIC via the argument `output%basename` in the configur
 > ```
 > where `filename.nc` is a netCDF file.
 
-In the plotting directory we collected some Python scripts that allow you to analyse the data. 
-In order to facilitate their execution, add their directory to the `$PATH` environment variable with
-```bash
-export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
-```
-The provided scripts are
+In the [plotting](plotting) directory we collected the following Python scripts:
 | Plotting script | Description |
 | :--- | :--- |
 | plot_cross_sections.py        | Create cross section plot from gridded data. |
@@ -230,7 +225,16 @@ The provided scripts are
 | plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`. |
 | plot_interesected_ellipses.py | Create a cross section plot where all intersection ellipses are displayed. |
 
+These scripts allow you to explore Eulerian and Lagrangian simulation data.
 Information how to use these scripts is printed when running with the flag `--help`, e.g. `plot_cross_sections.py --help`.
+
+> [!TIP]
+> We suggest that you append the plotting directory to the `$PATH` environment variable with
+> ```bash
+> export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
+> ```
+> in order to facilitate the usage of the plotting scripts. After this operation you can, for example, simply
+> type `plot_cross_sections.py --help` from any directory and without prefixing the Python interpreter.
 
 ##### Example:
 When you run the moist bubble case with the default settings, you can create a parcel cross section plot with
