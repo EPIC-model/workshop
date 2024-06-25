@@ -193,6 +193,28 @@ sbatch submit-job.sh
 > ```
 
 ### How to analyse output data
+EPIC writes the following files, where `<basename>` is to be replaced by the character
+string that is passed to EPIC via the argument `output%basename` in the configuration file:
+
+| Output file | Description  |
+| :--- | :--- |
+| `<basename>_xxxxxxxxxx_parcels.nc` | NetCDF containing parcel output where `xxxxxxxxxx` is replaced with the file number, e.g. `moist_0000000002_parcels.nc`. |
+| `<basename>_fields.nc` | NetCDF file containing gridded field output. |
+| `<basename>_field_stats.nc` | NetCDF file containing diagnostics evaluated on the Eulerian grid. |
+| `<basename>_parcel_stats.nc` | NetCDF file containing diagnostics evaluated using the Lagrangian parcels. |
+| `<basename>_alpha_time_step.asc` | ASCII file containing time step estimates for the maximum strain and maximum buoyancy gradient. |
+| `<basename>.csv` | ASCII file containing timings of the individual components of the code. |
+
+The frequency of writing to the respective netCDF files is controlled via the construct `output`
+in the configuration file.
+
+> [!TIP]
+> The command `ncdump` is useful to inspect a netCDF file, i.e.
+> ```bash
+> ncdump filename.nc | less
+> ```
+> where `filename.nc` is a netCDF file.
+
 In the plotting directory we collected some Python scripts that allow you to analyse the data. 
 In order to facilitate their execution, add their directory to the `$PATH` environment variable with
 ```bash
@@ -204,8 +226,8 @@ The provided scripts are
 | plot_cross_sections.py        | Create cross section plot from gridded data. |
 | plot_mean_profile.py          | Calculate the horizontal mean and plot as a height profile. |
 | plot_scatter.py               | Plot two parcel quantities against each other. |
-| plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`.
-| plot_interesected_ellipses.py | Create a cross section plot where all intersection ellipses are displayed.
+| plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`. |
+| plot_interesected_ellipses.py | Create a cross section plot where all intersection ellipses are displayed. |
 
 Information how to use these scripts is printed when running with the flag `--help`, e.g. `plot_cross_sections.py --help`.
 
@@ -221,16 +243,3 @@ which gives you this plot.
 
 ![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](xz-interesected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
-
-For example, you can simply call
-```bash
-plot_cross_section --help
-```
-on the command line.
-
-> [!TIP]
-> The command `ncdump` is useful to inspect a netCDF file, i.e.
-> ```bash
-> ncdump filename.nc | less
-> ```
-> where `filename.nc` is a netCDF file.
