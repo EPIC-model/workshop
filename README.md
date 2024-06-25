@@ -158,9 +158,18 @@ export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
 The provided scripts are
 | Command | Description |
 | :--- | :--- |
-| plot_cross_sections.py | Create cross section plot from gridded data. |
-| plot_mean_profile.py   | Calculate the horizontal mean and plot as a height profile. |
-| plot_scatter.py        | Plot two parcel quantities against each other. |
-| plot_histogram.py      | Make a histogram plot using parcel data. Check the different options with `--help`.
+| plot_cross_sections.py        | Create cross section plot from gridded data. |
+| plot_mean_profile.py          | Calculate the horizontal mean and plot as a height profile. |
+| plot_scatter.py               | Plot two parcel quantities against each other. |
+| plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`.
+| plot_interesected_ellipses.py | Create a cross section plot where all intersection ellipses are displayed.
 
-EPIC generates a bunch of output files. Here, we focus on the Eulerian and Lagrangian diagnostic files.
+For example, you can simply call
+```bash
+plot_cross_section --help
+```
+on the command line. The command `ncdump` is useful to inspect a netCDF file, i.e.
+```bash
+ncdump filename.nc | less
+```
+where `filename.nc` is a netCDF.
