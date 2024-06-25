@@ -155,19 +155,20 @@ For further information about the example, read section 3.4 in
 
 ### How to prepare a simulation
 The basic command to run a three-dimensional EPIC simulation is
-```bash
-epic3d --config [config.file]
 ```
-where in `config.file` all simulation parameters are defined. The configuration file for
-the moist bubble case is given in [input/moist.config](input/moist.config). The gridded
-input data is provided in a netCDF file and passed to EPIC via the `field_file` argument.
-Besides the gridded fields, the netCDF file also contains domain specifications and
-physical quantities. We provide you all the necessary tools to create such input data.
+epic3d --config <file.config>
+```
+where `<file.config>` is a placeholder for a configuration file that specifies all simulation parameters.
+The configuration file for the moist bubble test case is already given in [input/moist.config](input/moist.config).
+
+The argument `field_file` which is currently set to `'moist_64x64x64.nc'` points to a netCDF file
+which contains the initial gridded input data as well as domain specifications and
+physical quantities. In this course, we use Python scripts to generate such input files.
 After following the instructions on
 [how to load the Python virtual environment](#how-to-load-the-python-virtual-environment),
 you can run the script
 [input/write_moist_setup.py](input/write_moist_setup.py) which creates a file called
-`moist_<nx>x<ny>x<nz>.nc` with `<nx>`, `<ny>` and `<nz>` being replaced
+`moist_<nx>x<ny>x<nz>.nc`, where `<nx>`, `<ny>` and `<nz>` are replaced
 by the number of grid cells per dimension (default: `nx = ny = nz = 64`). You can call the script
 with the `--help` argument to get further information.
 
