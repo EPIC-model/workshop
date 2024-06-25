@@ -171,6 +171,8 @@ plot_interesected_ellipses.py --filename moist_0000000005_parcels.nc --steps 0 1
 ```
 which gives you this plot.
 
+![Cross section showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](xz-interesected_ellipses_location_32_buoyancy.png 
+"Cross section showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
 For example, you can simply call
 ```bash
