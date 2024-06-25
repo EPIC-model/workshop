@@ -81,7 +81,8 @@ If you would like to test the installation of EPIC, you can try out this [build 
 ```bash
 module load ncview-epic
 ```
-Note that you must be logged in with the flag `-X` in order to run ncview.
+> [!NOTE]
+> You must be logged in with the flag `-X` in order to run ncview.
 
 ***
 
@@ -181,8 +182,11 @@ For example, you can simply call
 ```bash
 plot_cross_section --help
 ```
-on the command line. The command `ncdump` is useful to inspect a netCDF file, i.e.
-```bash
-ncdump filename.nc | less
-```
-where `filename.nc` is a netCDF file.
+on the command line. 
+
+> [!TIP]
+> The command `ncdump` is useful to inspect a netCDF file, i.e.
+> ```bash
+> ncdump filename.nc | less
+> ```
+> where `filename.nc` is a netCDF file.
