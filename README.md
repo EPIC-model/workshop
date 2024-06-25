@@ -10,9 +10,9 @@ This repository serves as a tutorial to show you how to prepare, run and analyse
 - [How to load the EPIC environment](#how-to-load-the-epic-environment)
 - [How to load the Python virtual environment](#how-to-load-the-python-virtual-environment)
 - [Moist bubble test case](#moist-bubble-test-case)
-  - [Prepare input](#prepare-input)
-  - [Run simulation](#run-simulation)
-  - [Analyse output](#analyse-output)
+  - [How to prepare a simulation](#how-to-prepare-a-simulation)
+  - [How to run a simulation](#how-to-run-a-simulation)
+  - [How to analyse output data](#how-to-analyse-output-data)
 
 
 ***
@@ -136,7 +136,7 @@ S(h) =
 and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$. For further information about the example, read section 3.4 in
 [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
 
-### Prepare input
+### How to prepare a simulation
 The basic command to run a three-dimensional EPIC simulation is
 ```bash
 epic3d --config [config.file]
@@ -146,24 +146,24 @@ the moist bubble case is given in [input/moist.config](input/moist.config). The 
 input data is provided in a netCDF file and passed to EPIC via the `field_file` argument.
 Besides the gridded fields, the netCDF file also contains domain specifications and
 physical quantities. We provide you all the necessary tools to create such input data.
-You must therefore load the Python virtual environmnent installed on Cirrus following the
-instructions given in the previous section on
-[how to load the Python virtual environment](#how-to-load-the-python-virtual-environment).
-A script to generate the input data for the moist bubble test case is already provided in
-[input/write_moist_setup.py](input/write_moist_setup.py). When executed, the script will
-create a file called `moist_[nx]x[ny]x[nz].nc` where `[nx]`, `[ny]` and `[nz]` are replaced
-by the number of grid cells per such dimension (default: `nx = ny = nz = 64`).
+After following the instructions on
+[how to load the Python virtual environment](#how-to-load-the-python-virtual-environment),
+you can run the script
+[input/write_moist_setup.py](input/write_moist_setup.py) which creates a file called
+`moist_<nx>x<ny>x<nz>.nc` with `<nx>`, `<ny>` and `<nz>` being replaced
+by the number of grid cells per dimension (default: `nx = ny = nz = 64`). You can call the script
+with the `--help` argument to get further information.
 
-### Run simulation
-Cirrus uses the SLURM job scheduling system. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
-```bash
-sbatch submit-job.sh
-```
-
+### How to run a simulation
 > [!IMPORTANT]
 > Our resources for this workshop are limited, so we kindly ask users to only use a
 > maximum of 1 computing node per job. In addition, jobs should not run longer than 20 minutes.
 
+Cirrus uses the SLURM job scheduling system. To run a simulation please use the provided
+[batch script](input/submit-job.sh). A job is submitted with
+```bash
+sbatch submit-job.sh
+```
 
 > [!TIP]
 > You can check the status of your submitted jobs with
@@ -175,7 +175,7 @@ sbatch submit-job.sh
 > scancel <jobid>
 > ```
 
-### Analyse output
+### How to analyse output data
 In the plotting directory we collected some Python scripts that allow you to analyse the data. In order to facilitate their execution, add their directory to the `$PATH` environment variable with
 ```bash
 export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
