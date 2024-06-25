@@ -111,4 +111,15 @@ squeue -u $USER
 ```
 
 ### Analyse output
+In the plotting directory we collected some Python scripts that allow you to analyse the data. In order to facilitate their execution, add their directory to the `$PATH` environment variable with
+```bash
+export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
+```
+The provided scripts are
+| Command | Description |
+| :--- | :--- |
+| plot_cross_sections.py | Create cross section plot from gridded data. |
+| plot_mean_profile.py   | Calculate the horizontal mean and plot as a height profile. |
+| plot_scatter.py        | Plot two parcel quantities against each other. |
+
 EPIC generates a bunch of output files. Here, we focus on the Eulerian and Lagrangian diagnostic files.
