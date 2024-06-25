@@ -156,7 +156,7 @@ In the plotting directory we collected some Python scripts that allow you to ana
 export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
 ```
 The provided scripts are
-| Command | Description |
+| Plotting script | Description |
 | :--- | :--- |
 | plot_cross_sections.py        | Create cross section plot from gridded data. |
 | plot_mean_profile.py          | Calculate the horizontal mean and plot as a height profile. |
