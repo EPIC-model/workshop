@@ -156,6 +156,10 @@ sbatch submit-job.sh
 > ```bash
 > squeue -u $USER
 > ```
+> A sbmitted or running job with id `<jobid>`  is cancelled calling
+> ```bash
+> scancel <jobid>
+> ```
 
 ### Analyse output
 In the plotting directory we collected some Python scripts that allow you to analyse the data. In order to facilitate their execution, add their directory to the `$PATH` environment variable with
