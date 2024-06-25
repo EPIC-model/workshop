@@ -205,8 +205,9 @@ string that is passed to EPIC via the argument `output%basename` in the configur
 | `<basename>_alpha_time_step.asc` | ASCII file containing time step estimates for the maximum strain and maximum buoyancy gradient. |
 | `<basename>.csv` | ASCII file containing timings of the individual components of the code. |
 
-The frequency of writing to the respective netCDF files is controlled via the construct `output`
-in the configuration file.
+> [!NOTE]
+> The frequency of writing to the respective netCDF files is controlled via the construct `output`
+> in the configuration file.
 
 > [!TIP]
 > The command `ncdump` is useful to inspect a netCDF file, i.e.
