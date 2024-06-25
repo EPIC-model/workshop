@@ -9,8 +9,8 @@ mpl.rcParams.update({
     "figure.figsize": (9, 6),
     "figure.dpi": 200,
     "font.family": "serif",
-    "font.size": 20,
-    "text.usetex": True,
+    "font.size": 12,
+    "text.usetex": False,
     'text.latex.preamble': "\n".join([
         r"\usepackage{amsmath}",
         r"\usepackage[utf8]{inputenc}",
