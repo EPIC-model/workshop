@@ -503,7 +503,7 @@ class nc_reader(nc_base_reader):
 
     def get_intersection_ellipses(self, step, plane, loc):
 
-        centres, B11, B12, V, indices = calculate_intersection_ellipses(step, plane, loc)
+        centres, B11, B12, V, indices = self.calculate_intersection_ellipses(step, plane, loc)
 
         B22 = self._get_B22(B11, B12, V)
         a2 = self._get_eigenvalue(B11, B12, B22)

@@ -2,9 +2,9 @@
 
 # Please do not change the following options:
 #SBATCH --job-name=EPIC
-#SBATCH --time=0:20:0
+#SBATCH --time=0:05:0
 #SBATCH --nodes=1
-#SBATCH --tasks-per-node=4
+#SBATCH --tasks-per-node=36
 #SBATCH --cpus-per-task=1
 #SBATCH --account=d185
 #SBATCH --partition=standard

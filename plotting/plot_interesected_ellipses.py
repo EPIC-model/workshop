@@ -17,7 +17,6 @@ try:
     parser = argparse.ArgumentParser(
         description="Plot all ellipses that are obtained from the intersection of a " \
                     "plane (either 'xy', 'xz' or 'yz') with the ellipsoids.")
-    )
 
     parser.add_argument(
         '--filename',

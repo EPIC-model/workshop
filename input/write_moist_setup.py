@@ -12,7 +12,7 @@ try:
         "--ngrid",
         type=int,
         required=False,
-        default=54,
+        default=64,
         help="number of grid cells per dimension",
     )
 
