@@ -26,8 +26,7 @@ This repository serves as a tutorial to show you how to prepare, run and analyse
   * Accept invite to `d185`, you will need to add the public part of an SSH key-pair to the `d185` machine account in SAFE when accepting the invite
   * Create an MFA token for the `d185` machine account on SAFE
   * Login to cirrus using an ssh client with: `ssh -i /path/to/your-ssh-private-key your_username@login.cirrus.ac.uk`
-  * The first time you login, you'll be asked to type your password (you can get it from SAFE) and then change it.
-  * From them on, you'll use the TOTP/MFA code, which only be asked once a day (unless your IP changes, then you'll be asked for another TOTP)
+  * Type your TOTP/MFA code, which only be asked once a day (unless your IP changes, then you'll be asked for another TOTP)
 
 #### Detailed Instructions:
 
@@ -51,9 +50,6 @@ ssh -i /path/to/your/ssh/key user@login.cirrus.ac.uk
 # for example, for the user "d185-rfga" using a linux system:
 ssh -i ~/.ssh/id_rsa_cirrus d185-rfga@login.cirrus.ac.uk
 ```
-
-The first time you login, you'll be asked for the TOPT and a text password.
-You can find the text password in your machine account page in SAFE: click `Login accounts` on the bar up top, then `your_d185_username@eidf`, and click the red button labelled "View Login Account Password".
 
 More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients).
 
