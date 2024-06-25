@@ -1,3 +1,4 @@
+#!/bin/env python
 import numpy as np
 import matplotlib.pyplot as plt
 from tools.nc_reader import nc_reader

@@ -1,3 +1,4 @@
+#!/bin/env python
 from tools.nc_reader import nc_reader
 from tools.mpl_beautify import add_timestamp, add_number_of_parcels
 from tools.mpl_style import *
