@@ -120,6 +120,8 @@ try:
         ell.set_clip_box(ax.bbox)
         ell.set_alpha(1.0)
         ell.set_rasterized(True)
+        # 25 June 2024
+        # https://matplotlib.org/stable/gallery/shapes_and_collections/ellipse_collection.html
         ell.set_array(data[indices].ravel())
         ell.set_cmap(cmap)
         ell.set_clim(vmin=vmin, vmax=vmax)
