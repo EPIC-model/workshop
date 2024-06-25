@@ -16,12 +16,49 @@ This repository serves as a tutorial to show you how to prepare, run and analyse
 
 
 ***
+
 ## Prerequisites
-#### Accessing the Cirrus cluster
-For further details please visit https://docs.cirrus.ac.uk/user-guide/connecting/.
+### Accessing the Cirrus cluster
+
+#### Summary:
+  * Create SSH key-pair
+  * Create SAFE account
+  * Accept invite to `d185`, you will need to add the public part of an SSH key-pair to the `d185` machine account in SAFE when accepting the invite
+  * Create an MFA token for the `d185` machine account on SAFE
+  * Login to cirrus using an ssh client with: `ssh -i /path/to/your-ssh-private-key your_username@login.cirrus.ac.uk`
+  * Type your TOTP/MFA code, which only be asked once a day (unless your IP changes, then you'll be asked for another TOTP)
+
+#### Detailed Instructions:
+
+The steps below will also be sent to your email, with the invite to join the `d185` project.
+
+To get an account on Cirrus, a Tier 2 national HPC service from the EPSRC in the UK,
+first you'll need an account on SAFE, the Service Administration service ran by EPCC.
+
+You can register for a SAFE account following the steps detailed in the [SAFE documentation](https://epcced.github.io/safe-docs/safe-for-users/#registering-logging-in-passwords),
+please register using the same email address that the invite was sent to.
+
+You will need to accept the invite to join `d185`, create an SSH key-pair -- [more instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-key-pairs) -- and add it to the `d185` machine account.
+
+You will then need to setup an MFA (multi-factor authentication) method for time based one time passwords (TOTP) and link it to your machine account, [see instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#time-based-one-time-passcode-totp-code).
+
+To login, use:
+
+```bash
+ssh -i /path/to/your/ssh/key user@login.cirrus.ac.uk
+
+# for example, for the user "d185-rfga" using a linux system:
+ssh -i ~/.ssh/id_rsa_cirrus d185-rfga@login.cirrus.ac.uk
+```
+
+More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients).
+
+For further details please visit the [Cirrus documentation page](https://docs.cirrus.ac.uk/user-guide/connecting/).
 
 #### Obtaining all resources
-Before you start, you must clone this repository to your working directory on Cirrus. You can do this by
+
+Before you start, you must clone this repository to your working directory on Cirrus. You can do this by using the command:
+
 ```bash
 cd /work/d185/d185/$USER
 git clone https://github.com/EPIC-model/workshop-trieste.git
@@ -29,6 +66,7 @@ git clone https://github.com/EPIC-model/workshop-trieste.git
 
 
 ***
+
 ## How to load the EPIC environment
 In order to simplify your task, we have pre-installed a working EPIC executable. After logging into Cirrus, you can load the environment with the following commands:
 ```bash
@@ -46,6 +84,7 @@ module load ncview-epic
 Note that you must be logged in with the flag `-X` in order to run ncview.
 
 ***
+
 ## How to load the Python virtual environment
 You can prepare the input to EPIC and analyse its output using our tools written in Python. For this purpose, you first need to load the virtual environment by typing the subsequent commands:
 ```bash
@@ -65,6 +104,7 @@ export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
 
 
 ***
+
 ## Moist bubble test case
 In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$ distribution inside the moist bubble are given by
 ```math
@@ -101,7 +141,7 @@ where in `config.file` all simulation parameters are defined. The configuration 
 via the `field_file` argument. Besides the gridded fields, the netCDF file also contains domain specifications and physical quantities. We provide you all the necessary tools to create such input data. You must therefore load the Python virtual environmnent installed on Cirrus following the instructions given in the previous section on [how to load the Python virtual environment](#how-to-load-the-python-virtual-environment). A script to generate the input data for the moist bubble test case is already provided in [input/write_moist_setup.py](input/write_moist_setup.py). When executed, the script will create a file called `moist_[nx]x[ny]x[nz].nc` where `[nx]`, `[ny]` and `[nz]` are replaced by the number of grid cells per such dimension (default: `nx = ny = nz = 54`).
 
 ### Run simulation
-Cirrus uses the SLURM job scheduling sytem. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
+Cirrus uses the SLURM job scheduling system. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
 ```bash
 sbatch submit-job.sh
 ```
