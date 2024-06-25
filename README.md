@@ -53,7 +53,8 @@ ssh -i ~/.ssh/id_rsa_cirrus d185-rfga@login.cirrus.ac.uk
 
 More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients).
 
-For further details please visit the [Cirrus documentation page](https://docs.cirrus.ac.uk/user-guide/connecting/).
+> [!NOTE]
+> For further details please visit the [Cirrus documentation page](https://docs.cirrus.ac.uk/user-guide/connecting/).
 
 #### Obtaining all resources
 
@@ -95,7 +96,10 @@ export CONDARC=${CONDA_ROOT}/.condarc
 eval "$(conda shell.bash hook)"
 conda activate epic-venv
 ```
-Note that the first four steps must be performed every time you log into the system. You can restore the original prompt by running ```conda deactivate``` twice.
+> [!NOTE]
+> The first four steps must be performed every time you log into the system.
+>
+> You can restore the original prompt by running ```conda deactivate``` twice.
 
 In the directory ```tools``` of this repository, we provide you with Python scripts that enable you to generate input data and analyse the output data. To use these scripts, you must make the Python interpreter aware of the modules by setting the
 environment variable
@@ -146,10 +150,12 @@ Cirrus uses the SLURM job scheduling system. To run the simulation please use th
 ```bash
 sbatch submit-job.sh
 ```
-You can check the status of your submitted jobs with
-```bash
-squeue -u $USER
-```
+
+> [!TIP]
+> You can check the status of your submitted jobs with
+> ```bash
+> squeue -u $USER
+> ```
 
 ### Analyse output
 In the plotting directory we collected some Python scripts that allow you to analyse the data. In order to facilitate their execution, add their directory to the `$PATH` environment variable with
@@ -182,7 +188,7 @@ For example, you can simply call
 ```bash
 plot_cross_section --help
 ```
-on the command line. 
+on the command line.
 
 > [!TIP]
 > The command `ncdump` is useful to inspect a netCDF file, i.e.
