@@ -167,7 +167,10 @@ The provided scripts are
 ##### Example:
 When you run the moist bubble case with the default settings, you can create a parcel cross section plot with
 ```bash
-plot_interesected_ellipses.py --filename moist_0000000005_parcels.nc --steps 0 1 2 3 4 5 --dataset buoyancy --plane xz
+plot_interesected_ellipses.py --filename moist_0000000005_parcels.nc \
+                              --steps 0 1 2 3 4 5 \
+                              --dataset buoyancy \
+                              --plane xz
 ```
 which gives you this plot.
 
