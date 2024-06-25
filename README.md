@@ -172,4 +172,4 @@ on the command line. The command `ncdump` is useful to inspect a netCDF file, i.
 ```bash
 ncdump filename.nc | less
 ```
-where `filename.nc` is a netCDF.
+where `filename.nc` is a netCDF file.
