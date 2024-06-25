@@ -136,20 +136,34 @@ S(h) =
 and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$. For further information about the example, read section 3.4 in
 [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
 
-
 ### Prepare input
 The basic command to run a three-dimensional EPIC simulation is
 ```bash
 epic3d --config [config.file]
 ```
-where in `config.file` all simulation parameters are defined. The configuration file for the moist bubble case is given in [input/moist.config](input/moist.config). The gridded input data is provided in a netCDF file and passed to EPIC
-via the `field_file` argument. Besides the gridded fields, the netCDF file also contains domain specifications and physical quantities. We provide you all the necessary tools to create such input data. You must therefore load the Python virtual environmnent installed on Cirrus following the instructions given in the previous section on [how to load the Python virtual environment](#how-to-load-the-python-virtual-environment). A script to generate the input data for the moist bubble test case is already provided in [input/write_moist_setup.py](input/write_moist_setup.py). When executed, the script will create a file called `moist_[nx]x[ny]x[nz].nc` where `[nx]`, `[ny]` and `[nz]` are replaced by the number of grid cells per such dimension (default: `nx = ny = nz = 54`).
+where in `config.file` all simulation parameters are defined. The configuration file for
+the moist bubble case is given in [input/moist.config](input/moist.config). The gridded
+input data is provided in a netCDF file and passed to EPIC via the `field_file` argument.
+Besides the gridded fields, the netCDF file also contains domain specifications and
+physical quantities. We provide you all the necessary tools to create such input data.
+You must therefore load the Python virtual environmnent installed on Cirrus following the
+instructions given in the previous section on
+[how to load the Python virtual environment](#how-to-load-the-python-virtual-environment).
+A script to generate the input data for the moist bubble test case is already provided in
+[input/write_moist_setup.py](input/write_moist_setup.py). When executed, the script will
+create a file called `moist_[nx]x[ny]x[nz].nc` where `[nx]`, `[ny]` and `[nz]` are replaced
+by the number of grid cells per such dimension (default: `nx = ny = nz = 64`).
 
 ### Run simulation
 Cirrus uses the SLURM job scheduling system. To run the simulation please use the provided [batch script](input/submit-job.sh). A job is submitted with
 ```bash
 sbatch submit-job.sh
 ```
+
+> [!IMPORTANT]
+> Our resources for this workshop are limited, so we kindly ask users to only use a
+> maximum of 1 computing node per job. In addition, jobs should not run longer than 20 minutes.
+
 
 > [!TIP]
 > You can check the status of your submitted jobs with
