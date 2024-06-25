@@ -121,5 +121,6 @@ The provided scripts are
 | plot_cross_sections.py | Create cross section plot from gridded data. |
 | plot_mean_profile.py   | Calculate the horizontal mean and plot as a height profile. |
 | plot_scatter.py        | Plot two parcel quantities against each other. |
+| plot_histogram.py      | Make a histogram plot using parcel data. Check the different options with `--help`.
 
 EPIC generates a bunch of output files. Here, we focus on the Eulerian and Lagrangian diagnostic files.
