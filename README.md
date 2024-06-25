@@ -156,7 +156,7 @@ sbatch submit-job.sh
 > ```bash
 > squeue -u $USER
 > ```
-> A sbmitted or running job with id `<jobid>`  is cancelled calling
+> A submitted or running job with id `<jobid>`  is cancelled calling
 > ```bash
 > scancel <jobid>
 > ```
