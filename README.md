@@ -60,11 +60,8 @@ ssh -i /path/to/your/ssh/key user@login.cirrus.ac.uk
 # for example, for the user "d185-rfga" using a linux system:
 ssh -i ~/.ssh/id_rsa_cirrus d185-rfga@login.cirrus.ac.uk
 ```
-
-More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients).
-
 > [!NOTE]
-> For further details please visit the [Cirrus documentation page](https://docs.cirrus.ac.uk/user-guide/connecting/).
+> More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients).
 
 #### Obtaining all resources
 
