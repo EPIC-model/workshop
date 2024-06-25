@@ -207,6 +207,8 @@ The provided scripts are
 | plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`.
 | plot_interesected_ellipses.py | Create a cross section plot where all intersection ellipses are displayed.
 
+Information how to use these scripts is printed when running with the flag `--help`, e.g. `plot_cross_sections.py --help`.
+
 ##### Example:
 When you run the moist bubble case with the default settings, you can create a parcel cross section plot with
 ```bash
