@@ -115,9 +115,9 @@ conda activate epic-venv
 >
 > You can restore the original prompt by running ```conda deactivate``` twice.
 
-In the directory ```tools``` of this repository, we provide you with Python scripts that 
-enable you to generate input data and analyse the output data. To use these scripts, you 
-must make the Python interpreter aware of the modules by setting the environment variable
+The directory ```tools``` contains Python scripts that enable you to generate input data 
+and analyse the output data. To use these scripts, you  must make the Python interpreter 
+aware of the modules by setting the environment variable
 ```bash
 export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
 ```
