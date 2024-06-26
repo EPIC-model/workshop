@@ -19,7 +19,7 @@ help you in case you face any issues regarding code compilation (not necessarily
   - [How to run a simulation](#how-to-run-a-simulation)
   - [How to analyse output data](#how-to-analyse-output-data)
     - [Plotting with provided scripts](#plotting-with-provided-scripts)
-    - [Plotting with Xarray](#plotting-with-xarray)
+    - [Plotting with xarray](#plotting-with-xarray)
 
 
 ***
@@ -251,7 +251,7 @@ which gives you this plot.
 ![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](figures/xz-interesected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
-### Plotting with Xarray
+### Plotting with xarray
 Alternatively, you can use the package [xarray](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
 > [!NOTE]
 > When loading the `pandas` package two warnings are thrown regarding the version of the packages `numexpr` and `bottleneck`. To suppress these warnings, you can use
