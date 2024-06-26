@@ -49,6 +49,11 @@ please register using the same email address that the invite was sent to.
 You will need to accept the invite to join `d185`, create an SSH key-pair --
 [more instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-key-pairs) --
 and add it to the `d185` machine account.
+You can either upload the public key file, or paste the text the file contains, i.e., copy the output of:
+
+```bash
+cat /path/to/your/key
+```
 
 You will then need to setup an MFA (multi-factor authentication) method for time based one
 time passwords (TOTP) and link it to your machine account,
