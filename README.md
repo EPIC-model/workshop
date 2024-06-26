@@ -252,7 +252,7 @@ which gives you this plot.
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
 ### Plotting with Xarray
-Alternatively, you can use the package [`xarray`](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
+Alternatively, you can use the package [xarray](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
 > [!NOTE]
 > When loading the `pandas` package two warnings are thrown regarding the version of the packages `numexpr` and `bottleneck`. To suppress these warnings, you can use
 > ```Python
