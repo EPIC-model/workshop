@@ -279,6 +279,6 @@ times = da.t.dt.strftime("%H:%M:%S")
 for i, ax in enumerate(g.axs.flat):
     ax.set_title("Time "+ times.data[i] + " (HH:MM:SS)")
 
-plt.savefig('xz-buoyanca-cross_section.png', bbox_inches='tight', dpi=200)
+plt.savefig('xz-buoyancy-cross_section.png', bbox_inches='tight', dpi=200)
 plt.close()
 ```
