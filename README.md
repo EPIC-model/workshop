@@ -248,3 +248,37 @@ which gives you this plot.
 
 ![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](xz-interesected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
+
+Alternatively, you can use the package [`xarray`](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
+> [!NOTE]
+> When loading the `pandas` package two warnings are thrown regarding the version of the packages `numexpr` and `bottleneck`. To suppress these warnings, you can use
+> ```Python
+> import warnings
+> warnings.filterwarnings("ignore", module='pandas')
+> ```
+The following code snippet creates a cross section plot of the gridded buoyancy field.
+```Python
+import warnings
+warnings.filterwarnings("ignore", module='pandas')
+
+import matplotlib.pyplot as plt
+import xarray as xr
+
+
+da = xr.open_dataset("moist_fields.nc")
+
+buoy = da.buoyancy
+
+# get a time series of xz-cross sections through the centre of the y-axis (grid point 32)
+t_buoy2d = buoy.isel(t=slice(0, 24, 4), y=32)
+
+g = t_buoy2d.plot(x="x", y="z", col="t", col_wrap=3, cmap=plt.cm.Blues, figsize=(12, 7))
+
+# fix the time format
+times = da.t.dt.strftime("%H:%M:%S")
+for i, ax in enumerate(g.axs.flat):
+    ax.set_title("Time "+ times.data[i] + " (HH:MM:SS)")
+
+plt.savefig('xz-buoyancy-cross_section.png', bbox_inches='tight', dpi=200)
+plt.close()
+```
