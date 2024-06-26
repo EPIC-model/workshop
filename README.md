@@ -18,6 +18,8 @@ help you in case you face any issues regarding code compilation (not necessarily
   - [How to prepare a simulation](#how-to-prepare-a-simulation)
   - [How to run a simulation](#how-to-run-a-simulation)
   - [How to analyse output data](#how-to-analyse-output-data)
+    - [Plotting with provided scripts](#plotting-with-provided-scripts)
+    - [Plotting with Xarray](#plotting-with-xarray)
 
 
 ***
@@ -216,6 +218,7 @@ string that is passed to EPIC via the argument `output%basename` in the configur
 > ```
 > where `filename.nc` is a netCDF file.
 
+#### Plotting with provided scripts
 In the [plotting](plotting) directory we collected the following Python scripts:
 | Plotting script | Description |
 | :--- | :--- |
@@ -236,8 +239,7 @@ Information how to use these scripts is printed when running with the flag `--he
 > in order to facilitate the usage of the plotting scripts. After this operation you can, for example, simply
 > type `plot_cross_sections.py --help` from any directory and without prefixing the Python interpreter.
 
-##### Example:
-When you run the moist bubble case with the default settings, you can create a parcel cross section plot with
+For example, when you run the moist bubble case with the default settings, you can create a parcel cross section plot with
 ```bash
 plot_interesected_ellipses.py --filename moist_0000000005_parcels.nc \
                               --steps 0 1 2 3 4 5 \
@@ -249,6 +251,7 @@ which gives you this plot.
 ![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](figures/xz-interesected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
+### Plotting with Xarray
 Alternatively, you can use the package [`xarray`](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
 > [!NOTE]
 > When loading the `pandas` package two warnings are thrown regarding the version of the packages `numexpr` and `bottleneck`. To suppress these warnings, you can use
