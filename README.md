@@ -262,6 +262,7 @@ import warnings
 warnings.filterwarnings("ignore", module='pandas')
 
 import matplotlib.pyplot as plt
+import colorcet as cc
 import xarray as xr
 
 
@@ -272,7 +273,7 @@ buoy = da.buoyancy
 # get a time series of xz-cross sections through the centre of the y-axis (grid point 32)
 t_buoy2d = buoy.isel(t=slice(0, 24, 4), y=32)
 
-g = t_buoy2d.plot(x="x", y="z", col="t", col_wrap=3, cmap=plt.cm.Blues, figsize=(12, 7))
+g = t_buoy2d.plot(x="x", y="z", col="t", col_wrap=3, cmap=cc.cm['coolwarm'], figsize=(12, 7))
 
 # fix the time format
 times = da.t.dt.strftime("%H:%M:%S")
