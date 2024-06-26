@@ -1,10 +1,10 @@
 # Welcome to the EPIC workshop in Trieste!
 
-This repository serves as a tutorial to show you how to prepare, run and analyse a moist bubble 
-simulation using the [Elliptical Parcel-In-Cell (EPIC)](https://doi.org/10.1016/j.jcpx.2023.100136) 
-method. During the course of this workshop (July 8th 2024), we provide you temporary access to the 
-Cirrus cluster, a Tier-2 system of the EPSRC. All information how to access Cirrus is provided below. 
-If you would like to work on your own laptop, feel free to do so. However, we might not be able to 
+This repository serves as a tutorial to show you how to prepare, run and analyse a moist bubble
+simulation using the [Elliptical Parcel-In-Cell (EPIC)](https://doi.org/10.1016/j.jcpx.2023.100136)
+method. During the course of this workshop (July 8th 2024), we provide you temporary access to the
+Cirrus cluster, a Tier-2 system of the EPSRC. All information how to access Cirrus is provided below.
+If you would like to work on your own laptop, feel free to do so. However, we might not be able to
 help you in case you face any issues regarding code compilation (not necessarily EPIC!).
 
 
@@ -40,16 +40,16 @@ The steps below will also be sent to your email, with the invite to join the `d1
 To get an account on Cirrus, a Tier 2 national HPC service from the EPSRC in the UK,
 first you'll need an account on SAFE, the Service Administration service ran by EPCC.
 
-You can register for a SAFE account following the steps detailed in the 
+You can register for a SAFE account following the steps detailed in the
 [SAFE documentation](https://epcced.github.io/safe-docs/safe-for-users/#registering-logging-in-passwords),
 please register using the same email address that the invite was sent to.
 
-You will need to accept the invite to join `d185`, create an SSH key-pair -- 
-[more instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-key-pairs) -- 
+You will need to accept the invite to join `d185`, create an SSH key-pair --
+[more instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-key-pairs) --
 and add it to the `d185` machine account.
 
-You will then need to setup an MFA (multi-factor authentication) method for time based one 
-time passwords (TOTP) and link it to your machine account, 
+You will then need to setup an MFA (multi-factor authentication) method for time based one
+time passwords (TOTP) and link it to your machine account,
 [see instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#time-based-one-time-passcode-totp-code).
 
 To login, use:
@@ -65,7 +65,7 @@ ssh -i ~/.ssh/id_rsa_cirrus d185-rfga@login.cirrus.ac.uk
 
 #### Obtaining all resources
 
-Before you start, you must clone this repository to your working directory on Cirrus. 
+Before you start, you must clone this repository to your working directory on Cirrus.
 You can do this by using the command:
 
 ```bash
@@ -77,7 +77,7 @@ git clone https://github.com/EPIC-model/workshop-trieste.git
 ***
 
 ## How to load the EPIC environment
-In order to simplify your task, we have pre-installed a working EPIC executable. 
+In order to simplify your task, we have pre-installed a working EPIC executable.
 After logging into Cirrus, you can load the environment with the following commands:
 ```bash
 module use /work/d185/d185/shared/modules
@@ -87,10 +87,10 @@ module load hdf5-epic
 module load netcdf-epic
 module load epic
 ```
-If you would like to test the installation of EPIC, you can try out this [build script](build-epic.sh). 
-For this purpose, you would not load the EPIC module (last command). If you want to try on your own 
-laptop, you may have noticed that EPIC requires a working gfortran compiler, MPI and a netCDF 
-(requires HDF5) installation. To inspect the netCDF output files while a simulation is running, 
+If you would like to test the installation of EPIC, you can try out this [build script](build-epic.sh).
+For this purpose, you would not load the EPIC module (last command). If you want to try on your own
+laptop, you may have noticed that EPIC requires a working gfortran compiler, MPI and a netCDF
+(requires HDF5) installation. To inspect the netCDF output files while a simulation is running,
 you can additionally load the ncview module with
 ```bash
 module load ncview-epic
@@ -101,7 +101,7 @@ module load ncview-epic
 ***
 
 ## How to load the Python virtual environment
-You can prepare the input to EPIC and analyse its output using our tools written in Python. 
+You can prepare the input to EPIC and analyse its output using our tools written in Python.
 For this purpose, you first need to load the virtual environment by typing the subsequent commands:
 ```bash
 module load python/3.9.13
@@ -115,8 +115,8 @@ conda activate epic-venv
 >
 > You can restore the original prompt by running ```conda deactivate``` twice.
 
-The directory ```tools``` contains Python scripts that enable you to generate input data 
-and analyse the output data. To use these scripts, you  must make the Python interpreter 
+The directory ```tools``` contains Python scripts that enable you to generate input data
+and analyse the output data. To use these scripts, you  must make the Python interpreter
 aware of the modules by setting the environment variable
 ```bash
 export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
@@ -126,7 +126,7 @@ export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
 ***
 
 ## Moist bubble test case
-In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$ 
+In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$
 distribution inside the moist bubble are given by
 ```math
 \begin{align}
@@ -149,7 +149,7 @@ S(h) =
 \end{align}
 \right.
 ```
-and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$. 
+and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$.
 For further information about the example, read section 3.4 in
 [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
 
@@ -246,7 +246,7 @@ plot_interesected_ellipses.py --filename moist_0000000005_parcels.nc \
 ```
 which gives you this plot.
 
-![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](xz-interesected_ellipses_location_32_buoyancy.png
+![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](figures/xz-interesected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
 Alternatively, you can use the package [`xarray`](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
@@ -282,3 +282,6 @@ for i, ax in enumerate(g.axs.flat):
 plt.savefig('xz-buoyancy-cross_section.png', bbox_inches='tight', dpi=200)
 plt.close()
 ```
+
+![Cross sections through the centre of the y-axis.](figures/xz-buoyancy-cross_section.png
+"Cross sections through the centre of the y-axis.")
