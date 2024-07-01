@@ -27,6 +27,8 @@ help you in case you face any issues regarding code compilation (not necessarily
 ## Prerequisites
 ### Accessing the Cirrus cluster
 
+Detailed information about the Cirrus cluster can be found in the [Cirrus website](https://www.cirrus.ac.uk/about/hardware.html) and in [this repo](lessons/01-Cirrus.md).
+
 #### Summary:
   * Create SSH key-pair
   * Create SAFE account
@@ -68,7 +70,8 @@ ssh -i /path/to/your/ssh/key user@login.cirrus.ac.uk
 ssh -i ~/.ssh/id_rsa_cirrus d185-rfga@login.cirrus.ac.uk
 ```
 > [!NOTE]
-> More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients).
+> More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients)
+> and in [this repo](lessons/00-Connecting.md).
 
 #### Obtaining all resources
 
