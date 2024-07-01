@@ -92,9 +92,10 @@ For example, if your username is `auser` and you are in the project `d185` then 
 
 You can view your work file system use and quota through SAFE in the same way as described for the home file system above.
 
-### Jobs can't see your data?
-If your jobs are having trouble accessing your data make sure you have placed it on the work file systems rather than the home file systems.
-Remember, **the home file systems are not visible from the compute nodes**.
+> [!NOTE]
+> ### Jobs can't see your data?
+> If your jobs are having trouble accessing your data make sure you have placed it on the work file systems rather than the home file systems.
+> Remember, **the home file systems are not visible from the compute nodes**.
 
 ## Sharing data with other users
 
