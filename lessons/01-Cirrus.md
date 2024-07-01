@@ -11,7 +11,7 @@ The CPU compute nodes each contain two 2.1 GHz, 18-core Intel Xeon E5-2695 (Broa
 The GPU compute nodes each contain two 2.5 GHz, 20-core Intel Xeon Gold 6148 (Cascade Lake) series processors
 and four NVIDIA Tesla V100-SXM2-16GB (Volta) GPU accelerators connected to the host processors and each other via PCIe.
 
-![Node architecture](lessons/fig/node_architecture.png)
+![Node architecture](fig/node_architecture.png)
 
 # Compute nodes
 
