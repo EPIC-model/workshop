@@ -183,7 +183,7 @@ The scheduling software is Slurm.
 As well as the hardware and system software, HPE supply the HPE Cray Programming Environment which contains:
 
 | Component                          | Available Options                                   |
-| ---------------------------------  | --------------------------------------------        |
+| ---------------------------------- | --------------------------------------------------- |
 | Compilers                          | GNU, Intel, NVIDIA                                  |
 | Parallel libraries                 | MPI, OpenMP, SYCL, CUDA, OpenACC                    |
 | Scientific and numerical libraries | BLAS, LAPACK, BLACS, ScaLAPACK, FFTW3, HDF5, NetCDF |
