@@ -147,7 +147,7 @@ try:
 
     add_annotation(grid[2], loc_label, xy=(0.7, 1.15))
 
-    plt.savefig(plane + '-interesected_ellipses_location_' + str(loc) + '_' + dset + '.png',
+    plt.savefig(plane + '-intersected_ellipses_location_' + str(loc) + '_' + dset + '.png',
                 dpi=200, bbox_inches='tight')
     plt.close()
 

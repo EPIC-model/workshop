@@ -234,7 +234,8 @@ In the [plotting](plotting) directory we collected the following Python scripts:
 | plot_mean_profile.py          | Calculate the horizontal mean and plot as a height profile. |
 | plot_scatter.py               | Plot two parcel quantities against each other. |
 | plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`. |
-| plot_interesected_ellipses.py | Create a cross section plot where all intersection ellipses are displayed. |
+| plot_intersected_ellipses.py  | Create a cross section plot where all intersection ellipses are displayed. |
+! plot_parcel_history.py        | Create a scatter plot with the original and final parcel height. |
 
 These scripts allow you to explore Eulerian and Lagrangian simulation data.
 Information how to use these scripts is printed when running with the flag `--help`, e.g. `plot_cross_sections.py --help`.
@@ -249,14 +250,14 @@ Information how to use these scripts is printed when running with the flag `--he
 
 For example, when you run the moist bubble case with the default settings, you can create a parcel cross section plot with
 ```bash
-plot_interesected_ellipses.py --filename moist_0000000005_parcels.nc \
+plot_intersected_ellipses.py --filename moist_0000000005_parcels.nc \
                               --steps 0 1 2 3 4 5 \
                               --dataset buoyancy \
                               --plane xz
 ```
 which gives you this plot.
 
-![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](figures/xz-interesected_ellipses_location_32_buoyancy.png
+![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](figures/xz-intersected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
 ### Plotting with xarray
