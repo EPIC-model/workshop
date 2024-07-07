@@ -46,8 +46,8 @@ ordered_z_start=z_start[start_order]
 
 # Correct for indexing difference between fortran and python
 plt.scatter(ordered_z_start[labels_end-1],z_end,s=vol_end,c=hum_end)
-plt.xlabel('$z_{start}$')
-plt.ylabel('$z_{end}$')
+plt.xlabel('z start')
+plt.ylabel('z end')
 my_title='parcel '+args.colour
 plt.title(my_title)
 plt.colorbar()
