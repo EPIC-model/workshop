@@ -8,7 +8,6 @@ from tools.mpl_style import *
 import argparse
 import os
 from tools.mpl_beautify import *
-import matplotlib as mpl
 
 try:
     parser = argparse.ArgumentParser(
@@ -45,7 +44,7 @@ try:
     t = ncr.get_all('t')
     z = ncr.get_all('z')
 
-
+    mpl.use("agg", force=True)
     fig, axs = plt.subplots(nrows=1, ncols=6, figsize=(16, 4), dpi=200, sharey=True)
 
     mpl.rcParams['lines.linewidth'] = 1.5

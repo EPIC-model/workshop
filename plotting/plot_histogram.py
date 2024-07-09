@@ -2,6 +2,7 @@
 from tools.nc_reader import nc_reader
 from tools.mpl_beautify import add_timestamp, add_number_of_parcels
 from tools.mpl_style import *
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import argparse
 import os
@@ -61,6 +62,7 @@ try:
 
     data = ncr.get_dataset(args.step-1, dset)
 
+    mpl.use("agg", force=True)
     plt.figure(figsize=(6, 4), dpi=200)
 
     plt.hist(x=data,

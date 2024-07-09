@@ -94,6 +94,7 @@ try:
 
     t = ncr.get_all('t')
 
+    mpl.use("agg", force=True)
     fig = plt.figure(figsize=(12, 8), dpi=200)
     grid = ImageGrid(fig, 111,
                      nrows_ncols=(2, 3),
