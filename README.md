@@ -235,7 +235,7 @@ In the [plotting](plotting) directory we collected the following Python scripts:
 | plot_scatter.py               | Plot two parcel quantities against each other. |
 | plot_histogram.py             | Make a histogram plot using parcel data. Check the different options with `--help`. |
 | plot_intersected_ellipses.py  | Create a cross section plot where all intersection ellipses are displayed. |
-! plot_parcel_history.py        | Create a scatter plot with the original and final parcel height. |
+| plot_parcel_history.py        | Create a scatter plot with the original and final parcel height. |
 
 These scripts allow you to explore Eulerian and Lagrangian simulation data.
 Information how to use these scripts is printed when running with the flag `--help`, e.g. `plot_cross_sections.py --help`.
