@@ -46,7 +46,7 @@ start_order=np.argsort(labels_start)
 ordered_z_start=z_start[start_order]
 
 # Correct for indexing difference between fortran and python
-    mpl.use("agg", force=True)
+mpl.use("agg", force=True)
 plt.scatter(ordered_z_start[labels_end-1],z_end,s=vol_end,c=hum_end)
 plt.xlabel('z start')
 plt.ylabel('z end')
