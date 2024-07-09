@@ -2,6 +2,7 @@
 from tools.nc_reader import nc_reader
 from tools.mpl_beautify import add_timestamp, add_number_of_parcels
 from tools.mpl_style import *
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import argparse
 import os
@@ -46,6 +47,7 @@ try:
     x_dset = ncr.get_dataset(args.step-1, dsets[0])
     y_dset = ncr.get_dataset(args.step-1, dsets[1])
 
+    mpl.use("agg", force=True)
     plt.figure(figsize=(7, 7), dpi=200)
 
     plt.scatter(x_dset, y_dset, marker='o', c='blue', s=2)
