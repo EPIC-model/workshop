@@ -10,7 +10,7 @@ help you in case you face any issues regarding code compilation (not necessarily
 
 ### Table of Contents
 - [Prerequisites](#prerequisites)
-  - [Accessing the Cirrus cluster](#accessing-the-cirrus-cluster)
+  - [Accessing the Cirrus cluster](sites/cluster_access.md)
   - [Obtaining all resources](#obtaining-all-resources)
 - [How to load the EPIC environment](#how-to-load-the-epic-environment)
 - [How to load the Python virtual environment](#how-to-load-the-python-virtual-environment)
@@ -25,6 +25,7 @@ help you in case you face any issues regarding code compilation (not necessarily
 ***
 
 ## Prerequisites
+
 
 #### Obtaining all resources
 
