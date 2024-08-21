@@ -8,12 +8,8 @@ If you would like to work on your own laptop, feel free to do so. However, we mi
 help you in case you face any issues regarding code compilation (not necessarily EPIC!).
 
 
-### Table of Contents
-- [Prerequisites](#prerequisites)
-  - [Accessing the Cirrus cluster](sites/cluster_access.md)
-  - [Obtaining all resources](#obtaining-all-resources)
-- [How to load the EPIC environment](#how-to-load-the-epic-environment)
-- [How to load the Python virtual environment](#how-to-load-the-python-virtual-environment)
+## Table of Contents
+- [Accessing the Cirrus cluster](sites/cluster_access.md)
 - [Moist bubble test case](#moist-bubble-test-case)
   - [How to prepare a simulation](#how-to-prepare-a-simulation)
   - [How to run a simulation](#how-to-run-a-simulation)
