@@ -8,6 +8,6 @@ Edinburgh and EPSRC (EP/P020267/1). All information how to access Cirrus is prov
 If you would like to work on your own laptop, feel free to do so. However, we might not be able to
 help you in case you face any issues regarding code compilation (not necessarily EPIC!).
 
-- [Accessing the Cirrus cluster](sites/cluster_access.md)
-- [Setting up the environment](sites/setup_environment.md)
-- [Moist bubble test case](sites/moist_bubble.md)
+- [Accessing the Cirrus cluster](sites/01-cluster_access.md)
+- [Setting up the environment](sites/02-setup_environment.md)
+- [Moist bubble test case](sites/03-moist_bubble.md)
