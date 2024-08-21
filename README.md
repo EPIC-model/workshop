@@ -1,4 +1,4 @@
-# Welcome to the EPIC workshop in Trieste!
+# Welcome to the EPIC workshop!
 
 This repository serves as a tutorial to show you how to prepare, run and analyse a moist bubble
 simulation using the [Elliptical Parcel-In-Cell (EPIC)](https://doi.org/10.1016/j.jcpx.2023.100136)
