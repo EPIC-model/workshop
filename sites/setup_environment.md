@@ -9,8 +9,8 @@ Before you start, you must clone this repository to your working directory on Ci
 You can do this by using the command:
 
 ```bash
-cd /work/d185/d185/$USER
-git clone https://github.com/EPIC-model/workshop-trieste.git
+cd /work/tc066/tc066/$USER
+git clone https://github.com/EPIC-model/workshop.git
 ```
 
 
@@ -20,7 +20,7 @@ git clone https://github.com/EPIC-model/workshop-trieste.git
 In order to simplify your task, we have pre-installed a working EPIC executable.
 After logging into Cirrus, you can load the environment with the following commands:
 ```bash
-module use /work/d185/d185/shared/modules
+module use /work/tc066/tc066/shared/modules
 module load gcc/10.2.0
 module load openmpi/4.1.6
 module load hdf5-epic
@@ -45,7 +45,7 @@ You can prepare the input to EPIC and analyse its output using our tools written
 For this purpose, you first need to load the virtual environment by typing the subsequent commands:
 ```bash
 module load python/3.9.13
-CONDA_ROOT=/work/d185/d185/shared/condaenvs
+CONDA_ROOT=/work/tc066/tc066/shared/condaenvs
 export CONDARC=${CONDA_ROOT}/.condarc
 eval "$(conda shell.bash hook)"
 conda activate epic-venv
@@ -59,5 +59,5 @@ The directory ```tools``` contains Python scripts that enable you to generate in
 and analyse the output data. To use these scripts, you  must make the Python interpreter
 aware of the modules by setting the environment variable
 ```bash
-export PYTHONPATH=$PYTHONPATH:/work/d185/d185/$USER/workshop-trieste
+export PYTHONPATH=$PYTHONPATH:/work/tc066/tc066/$USER/workshop
 ```
