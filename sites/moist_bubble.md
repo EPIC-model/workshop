@@ -112,7 +112,7 @@ Information how to use these scripts is printed when running with the flag `--he
 > [!TIP]
 > We suggest that you append the plotting directory to the `$PATH` environment variable with
 > ```bash
-> export PATH=$PATH:/work/d185/d185/$USER/workshop-trieste/plotting
+> export PATH=$PATH:/work/tc066/tc066/$USER/workshop/plotting
 > ```
 > in order to facilitate the usage of the plotting scripts. After this operation you can, for example, simply
 > type `plot_cross_sections.py --help` from any directory and without prefixing the Python interpreter.
