@@ -1,5 +1,10 @@
-#### Obtaining all resources
+# Setting up the environment
+- [Obtaining all resources](#obtaining-all-resources)
+- [How to load the EPIC environment](#how-to-load-the-epic-environment)
+- [How to load the Python virtual environment](#how-to-load-the-python-virtual-environment)
 
+
+## Obtaining all resources
 Before you start, you must clone this repository to your working directory on Cirrus.
 You can do this by using the command:
 
