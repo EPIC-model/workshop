@@ -7,12 +7,6 @@ Cirrus cluster, a Tier-2 system of the EPSRC. All information how to access Cirr
 If you would like to work on your own laptop, feel free to do so. However, we might not be able to
 help you in case you face any issues regarding code compilation (not necessarily EPIC!).
 
-
-## Table of Contents
 - [Accessing the Cirrus cluster](sites/cluster_access.md)
-- [Moist bubble test case](#moist-bubble-test-case)
-  - [How to prepare a simulation](#how-to-prepare-a-simulation)
-  - [How to run a simulation](#how-to-run-a-simulation)
-  - [How to analyse output data](#how-to-analyse-output-data)
-    - [Plotting with provided scripts](#plotting-with-provided-scripts)
-    - [Plotting with xarray](#plotting-with-xarray)
+- [Setting up the environment](sites/setup_environment.md)
+- [Moist bubble test case](sites/moist_bubble.md)
