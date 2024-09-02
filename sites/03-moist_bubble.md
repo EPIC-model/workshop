@@ -38,7 +38,7 @@ The basic command to run a three-dimensional EPIC simulation is
 epic3d --config <file.config>
 ```
 where `<file.config>` is a placeholder for a configuration file that specifies all simulation parameters.
-The configuration file for the moist bubble test case is already given in [input/moist.config](input/moist.config).
+The configuration file for the moist bubble test case is already given in [input/moist.config](../input/moist.config).
 
 The argument `field_file` which is currently set to `'moist_64x64x64.nc'` points to a netCDF file
 which contains the initial gridded input data as well as domain specifications and
@@ -46,14 +46,14 @@ physical quantities. In this course, we use Python scripts to generate such inpu
 After following the instructions on
 [how to load the Python virtual environment](#how-to-load-the-python-virtual-environment),
 you can run the script
-[input/write_moist_setup.py](input/write_moist_setup.py) which creates a file called
+[input/write_moist_setup.py](../input/write_moist_setup.py) which creates a file called
 `moist_<nx>x<ny>x<nz>.nc`, where `<nx>`, `<ny>` and `<nz>` are replaced
 by the number of grid cells per dimension (default: `nx = ny = nz = 64`). You can call the script
 with the `--help` argument to get further information.
 
 ### How to run a simulation
 Cirrus uses the SLURM job scheduling system. To run a simulation please use the provided
-[batch script](input/submit-job.sh). A job is submitted with
+[batch script](../input/submit-job.sh). A job is submitted with
 ```bash
 sbatch submit-job.sh
 ```
@@ -96,7 +96,7 @@ string that is passed to EPIC via the argument `output%basename` in the configur
 > where `filename.nc` is a netCDF file.
 
 #### Plotting with provided scripts
-In the [plotting](plotting) directory we collected the following Python scripts:
+In the [plotting](../plotting) directory we collected the following Python scripts:
 | Plotting script | Description |
 | :--- | :--- |
 | plot_cross_sections.py        | Create cross section plot from gridded data. |
@@ -126,7 +126,7 @@ plot_intersected_ellipses.py --filename moist_0000000005_parcels.nc \
 ```
 which gives you this plot.
 
-![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](figures/xz-intersected_ellipses_location_32_buoyancy.png
+![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](./.figures/xz-intersected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
 ### Plotting with xarray
@@ -165,5 +165,5 @@ plt.savefig('xz-buoyancy-cross_section.png', bbox_inches='tight', dpi=200)
 plt.close()
 ```
 
-![Cross sections through the centre of the y-axis.](figures/xz-buoyancy-cross_section.png
+![Cross sections through the centre of the y-axis.](../figures/xz-buoyancy-cross_section.png
 "Cross sections through the centre of the y-axis.")
