@@ -126,7 +126,7 @@ plot_intersected_ellipses.py --filename moist_0000000005_parcels.nc \
 ```
 which gives you this plot.
 
-![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](./.figures/xz-intersected_ellipses_location_32_buoyancy.png
+![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](../figures/xz-intersected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
 ### Plotting with xarray
