@@ -1,6 +1,6 @@
 # Accessing the Cirrus cluster
 
-Detailed information about the Cirrus cluster can be found in the [Cirrus website](https://www.cirrus.ac.uk/about/hardware.html) and in [this repo](lessons/01-Cirrus.md).
+Detailed information about the Cirrus cluster can be found in the [Cirrus website](https://www.cirrus.ac.uk/about/hardware.html) and in [this repo](../lessons/01-Cirrus.md).
 
 #### Summary:
   * Create SSH key-pair
@@ -44,4 +44,4 @@ ssh -i ~/.ssh/id_rsa_cirrus tc066-rfga@login.cirrus.ac.uk
 ```
 > [!NOTE]
 > More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients)
-> and in [this repo](lessons/00-Connecting.md).
+> and in [this repo](../lessons/00-Connecting.md).
