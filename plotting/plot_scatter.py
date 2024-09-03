@@ -1,15 +1,16 @@
-#!/bin/env python
-from tools.nc_reader import nc_reader
-from tools.mpl_beautify import add_timestamp, add_number_of_parcels
-from tools.mpl_style import *
-import matplotlib as mpl
-import matplotlib.pyplot as plt
+#!/bin/env python3
 import argparse
 import os
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from tools.mpl_beautify import add_number_of_parcels, add_timestamp
+from tools.mpl_style import *
+from tools.nc_reader import nc_reader
+
 try:
     parser = argparse.ArgumentParser(
-        description="Scatter plot. This script creates a scatter plot where " \
+        description="Scatter plot. This script creates a scatter plot where "
                     "the x and y axes are different parcel datasets."
     )
 
@@ -29,7 +30,6 @@ try:
         nargs=2,
         help='Takes 2 datasets')
 
-
     args = parser.parse_args()
 
     dsets = args.datasets
@@ -41,11 +41,8 @@ try:
 
     ncr.open(args.filename)
 
-
-
-
-    x_dset = ncr.get_dataset(args.step-1, dsets[0])
-    y_dset = ncr.get_dataset(args.step-1, dsets[1])
+    x_dset = ncr.get_dataset(args.step - 1, dsets[0])
+    y_dset = ncr.get_dataset(args.step - 1, dsets[1])
 
     mpl.use("agg", force=True)
     plt.figure(figsize=(7, 7), dpi=200)
@@ -58,11 +55,11 @@ try:
     ylabel = ncr.get_label(dsets[1]) + ' (' + ncr.get_units(dsets[1]) + ')'
     plt.ylabel(ylabel)
 
-    t = ncr.get_dataset(args.step-1, name='t')
+    t = ncr.get_dataset(args.step - 1, name='t')
 
     add_timestamp(plt, t, xy=(0.80, 1.02))
 
-    num = ncr.get_num_parcels(args.step-1)
+    num = ncr.get_num_parcels(args.step - 1)
     add_number_of_parcels(plt, num, xy=(0.01, 1.02))
 
     plt.tight_layout()

@@ -33,7 +33,7 @@ See the Cirrus User and Best Practice Guide for information on how to create SSH
 Once you have managed to setup your TOTP and SSH key pair try to log into Cirrus for the first time using the command:
 
 ```bash
-ssh -i /path/to/sshkey username@login.archer2.ac.uk
+ssh -i /path/to/sshkey username@login.cirrus.ac.uk
 ```
 
 # Data transfer services: scp, rsync

@@ -1,13 +1,13 @@
-#!/bin/env python
-import numpy as np
-import matplotlib.pyplot as plt
-from tools.nc_reader import nc_reader
-import matplotlib as mpl
-from tools.utils import *
-from tools.mpl_style import *
+#!/bin/env python3
 import argparse
-import os
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 from tools.mpl_beautify import *
+from tools.mpl_style import *
+from tools.nc_reader import nc_reader
+from tools.utils import *
 
 try:
     parser = argparse.ArgumentParser(

@@ -1,13 +1,15 @@
+#!/bin/env python3
 import argparse
-from tools.nc_reader import nc_reader
-from tools.nc_parcels import nc_parcels
-import numpy as np
 import os
+
+import numpy as np
+from tools.nc_parcels import nc_parcels
+from tools.nc_reader import nc_reader
 
 try:
     parser = argparse.ArgumentParser(
-        description="Extracts all ellipses that result from the intersection of " \
-        "ellipsoids with a plane. The plane can be either xz, xy or yz. The position " \
+        description="Extracts all ellipses that result from the intersection of "
+        "ellipsoids with a plane. The plane can be either xz, xy or yz. The position "
         "'--loc' of the intersection point is specified in the form of grid points."
     )
 
@@ -37,7 +39,6 @@ try:
         type=str,
         help='dataset to extract')
 
-
     args = parser.parse_args()
 
     if not os.path.exists(args.filename):
@@ -50,9 +51,9 @@ try:
 
     ncr.open(args.filename)
 
-    dset = ncr.get_dataset(args.step-1, args.dataset)
+    dset = ncr.get_dataset(args.step - 1, args.dataset)
 
-    centres, B11, B12, V, ind = ncr.calculate_intersection_ellipses(args.step-1, args.plane, args.loc)
+    centres, B11, B12, V, ind = ncr.calculate_intersection_ellipses(args.step - 1, args.plane, args.loc)
 
     origin = ncr.get_box_origin()
     extent = ncr.get_box_extent()
