@@ -27,11 +27,12 @@ module load hdf5-epic
 module load netcdf-epic
 module load epic
 ```
+
 If you would like to test the installation of EPIC, you can try out this [build script](../build-epic.sh).
-For this purpose, you would not load the EPIC module (last command). If you want to try on your own
-laptop, you may have noticed that EPIC requires a working gfortran compiler, MPI and a netCDF
-(requires HDF5) installation. To inspect the netCDF output files while a simulation is running,
-you can additionally load the ncview module with
+For this purpose, you would not load the EPIC module (last command).
+If you want to try on your own laptop, you may have noticed that EPIC requires a working gfortran compiler, MPI and a netCDF (requires HDF5) installation.
+To inspect the netCDF output files while a simulation is running, you can additionally load the ncview module with
+
 ```bash
 module load ncview-epic
 ```
