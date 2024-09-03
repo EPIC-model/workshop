@@ -37,10 +37,10 @@ You will then need to setup an MFA (multi-factor authentication) method for time
 To login, use:
 
 ```bash
-ssh -i /path/to/your/ssh/privatekey user@login.cirrus.ac.uk
+ssh -X -i /path/to/your/ssh/privatekey user@login.cirrus.ac.uk
 
 # for example, for the user "tc066-rfga" using a linux system:
-ssh -i ~/.ssh/id_rsa_cirrus tc066-rfga@login.cirrus.ac.uk
+ssh -X -i ~/.ssh/id_rsa_cirrus tc066-rfga@login.cirrus.ac.uk
 ```
 > [!NOTE]
 > More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients)
