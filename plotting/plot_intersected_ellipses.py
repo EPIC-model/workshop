@@ -1,21 +1,20 @@
-#!/bin/env python
-import numpy as np
-import matplotlib.pyplot as plt
-from tools.nc_reader import nc_reader
-import matplotlib as mpl
-from mpl_toolkits.axes_grid1 import ImageGrid
-from tools.utils import *
-from tools.mpl_style import *
+#!/bin/env python3
 import argparse
-import os
-from tools.mpl_beautify import *
-import matplotlib as mpl
+
 import colorcet as cc
+import matplotlib as mpl
 import matplotlib.colors as cls
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.axes_grid1 import ImageGrid
+from tools.mpl_beautify import *
+from tools.mpl_style import *
+from tools.nc_reader import nc_reader
+from tools.utils import *
 
 try:
     parser = argparse.ArgumentParser(
-        description="Plot all ellipses that are obtained from the intersection of a " \
+        description="Plot all ellipses that are obtained from the intersection of a "
                     "plane (either 'xy', 'xz' or 'yz') with the ellipsoids.")
 
     parser.add_argument(
@@ -112,7 +111,7 @@ try:
     for i, step in enumerate(steps):
 
         ax = grid[i]
-        
+
         ell, indices = ncr.get_intersection_ellipses(step, plane, loc)
         data = ncr.get_dataset(step, name=dset)
         ax.add_collection(ell)
@@ -126,8 +125,8 @@ try:
         ell.set_cmap(cmap)
         ell.set_clim(vmin=vmin, vmax=vmax)
 
-        ax.set_xlim([origin[0], origin[0]+extent[0]])
-        ax.set_ylim([origin[1], origin[1]+extent[1]])
+        ax.set_xlim([origin[0], origin[0] + extent[0]])
+        ax.set_ylim([origin[1], origin[1] + extent[1]])
 
         if i < 3:
             remove_xticks(ax)

@@ -1,17 +1,15 @@
-#!/bin/env python
-import numpy as np
-import matplotlib.pyplot as plt
-from tools.nc_reader import nc_reader
-import matplotlib as mpl
-from mpl_toolkits.axes_grid1 import ImageGrid
-from tools.utils import *
-from tools.mpl_style import *
+#!/bin/env python3
 import argparse
-import os
-from tools.mpl_beautify import *
-import matplotlib as mpl
-import colorcet as cc
 
+import colorcet as cc
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.axes_grid1 import ImageGrid
+from tools.mpl_beautify import *
+from tools.mpl_style import *
+from tools.nc_reader import nc_reader
+from tools.utils import *
 
 try:
     parser = argparse.ArgumentParser(
@@ -62,7 +60,6 @@ try:
         default=None,
         help="colour map norm")
 
-
     args = parser.parse_args()
 
     fname = args.filename
@@ -109,6 +106,7 @@ try:
 
     vmax = -10000
     vmin =  10000
+
     for i, step in enumerate(steps):
         data = ncr.get_dataset(step, name=dset)
 
@@ -122,6 +120,7 @@ try:
         data = ncr.get_dataset(step, name=dset)
 
         im, cbar = make_imshow(ax=ax,
+
                                plane=plane,
                                loc=loc,
                                fdata=data,
@@ -146,7 +145,6 @@ try:
             cbar.set_label(ncr.get_label(dset))
 
     add_annotation(grid[2], loc_label, xy=(0.7, 1.15))
-
 
     plt.savefig(plane + '-cross_section_location_' + str(loc) + '_' + dset + '.png',
                 dpi=200, bbox_inches='tight')
