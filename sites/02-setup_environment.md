@@ -19,6 +19,7 @@ git clone https://github.com/EPIC-model/workshop.git
 ## How to load the EPIC environment
 In order to simplify your task, we have pre-installed a working EPIC executable.
 After logging into Cirrus, you can load the environment with the following commands:
+
 ```bash
 module use /work/tc066/tc066/shared/modules
 module load gcc/10.2.0
@@ -26,6 +27,7 @@ module load openmpi/4.1.6
 module load hdf5-epic
 module load netcdf-epic
 module load epic
+module load ImageMagick
 ```
 
 If you would like to test the installation of EPIC, you can try out this [build script](../build-epic.sh).
