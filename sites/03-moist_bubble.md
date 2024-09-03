@@ -124,20 +124,32 @@ plot_intersected_ellipses.py --filename moist_0000000005_parcels.nc \
                               --dataset buoyancy \
                               --plane xz
 ```
-which gives you this plot.
+which gives you this plot:
 
 ![Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.](../figures/xz-intersected_ellipses_location_32_buoyancy.png
 "Cross sections showing the ellipses obained from the intersection of the ellipsoids with the xz-plane through the centre of the y-axis.")
 
+You can open the image with:
+
+```bash
+display <plane>-intersected_ellipses_<loc>_<dataset>.png
+# for example, the image above is
+display xy-intersected_ellipses_32_buoyamcy.png
+```
+
 ### Plotting with xarray
+
 Alternatively, you can use the package [xarray](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
+> 
 > [!NOTE]
 > When loading the `pandas` package two warnings are thrown regarding the version of the packages `numexpr` and `bottleneck`. To suppress these warnings, you can use
 > ```Python
 > import warnings
 > warnings.filterwarnings("ignore", module='pandas')
 > ```
+
 The following code snippet creates a cross section plot of the gridded buoyancy field.
+
 ```Python
 import warnings
 warnings.filterwarnings("ignore", module='pandas')
@@ -163,6 +175,12 @@ for i, ax in enumerate(g.axs.flat):
 
 plt.savefig('xz-buoyancy-cross_section.png', bbox_inches='tight', dpi=200)
 plt.close()
+```
+
+You can open the image with:
+
+```bash
+display xz-buoyancy-cross_section.png
 ```
 
 ![Cross sections through the centre of the y-axis.](../figures/xz-buoyancy-cross_section.png

@@ -5,7 +5,7 @@ If you're using a Linux distribution, you most likely already have X-Window runn
 If you're using MacOS, you can use [XQuartz](https://www.xquartz.org/).
 If you're using Windows with WSL or mobaXterm, you'll need [XMing](https://sourceforge.net/projects/xming/).
 
-To test if the X server is working correctly, after logging in to cirrus with the `-X` option (more on how to connect to cirrus later), you can use the following commands:
+To test if the X server is working correctly, after logging in to cirrus with the `-X` option (more on how to [connect to cirrus later](01-cluster_access.md)), you can use the following commands:
 
 ```bash
 module load ImageMagick
