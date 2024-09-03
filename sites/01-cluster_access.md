@@ -24,20 +24,20 @@ please register using the same email address that the invite was sent to.
 You will need to accept the invite to join `tc066`, create an SSH key-pair --
 [more instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-key-pairs) --
 and add it to the `tc066` machine account.
+The public key will be a file ending in `.pub`, while the private key will have no extension.
 You can either upload the public key file, or paste the text the file contains, i.e., copy the output of:
 
 ```bash
-cat /path/to/your/key
+cat /path/to/your/key.pub
 ```
 
-You will then need to setup an MFA (multi-factor authentication) method for time based one
-time passwords (TOTP) and link it to your machine account,
-[see instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#time-based-one-time-passcode-totp-code).
+You will then need to setup an MFA (multi-factor authentication) method for time based one time passwords (TOTP) and link it to your machine account,
+[see detailed instructions here](https://docs.cirrus.ac.uk/user-guide/connecting/#time-based-one-time-passcode-totp-code).
 
 To login, use:
 
 ```bash
-ssh -i /path/to/your/ssh/key user@login.cirrus.ac.uk
+ssh -i /path/to/your/ssh/privatekey user@login.cirrus.ac.uk
 
 # for example, for the user "tc066-rfga" using a linux system:
 ssh -i ~/.ssh/id_rsa_cirrus tc066-rfga@login.cirrus.ac.uk
