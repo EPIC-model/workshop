@@ -1,4 +1,4 @@
-Next: [Cluster access](01-cluster_access.md), Previous: [Main page](../README.md), Up: [Main page](../README.md)
+Next: [Cluster access](01-cluster_access.md), Previous: [Main page](../README.md), Up: [Main page](../README.md)&nbsp;&nbsp;&nbsp;&nbsp;[[Contents](../README.md#table-of-contents)]
 
 # Installing X-Windows
 
