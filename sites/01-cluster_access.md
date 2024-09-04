@@ -1,4 +1,4 @@
-Next: [Setting up the environment](02-setup_environment.md), Previous: [Installing X-Windows](00-xwindow.md)
+Next: [Setting up the environment](02-setup_environment.md), Previous: [Installing X-Windows](00-xwindow.md), Up: [Main page](../README.md)
 
 # Accessing the Cirrus cluster
 
