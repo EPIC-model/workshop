@@ -2,8 +2,6 @@
  - [How to prepare a simulation](#how-to-prepare-a-simulation)
   - [How to run a simulation](#how-to-run-a-simulation)
   - [How to analyse output data](#how-to-analyse-output-data)
-    - [Plotting with provided scripts](#plotting-with-provided-scripts)
-    - [Plotting with xarray](#plotting-with-xarray)
 
 In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$
 distribution inside the moist bubble are given by
@@ -70,27 +68,3 @@ sbatch submit-job.sh
 > ```bash
 > scancel <jobid>
 > ```
-
-### How to analyse output data
-EPIC writes the following files, where `<basename>` is to be replaced by the character
-string that is passed to EPIC via the argument `output%basename` in the configuration file:
-
-| Output file | Description  |
-| :--- | :--- |
-| `<basename>_xxxxxxxxxx_parcels.nc` | NetCDF containing parcel output where `xxxxxxxxxx` is replaced with the file number, e.g. `moist_0000000002_parcels.nc`. |
-| `<basename>_fields.nc` | NetCDF file containing gridded field output. |
-| `<basename>_field_stats.nc` | NetCDF file containing diagnostics evaluated on the Eulerian grid. |
-| `<basename>_parcel_stats.nc` | NetCDF file containing diagnostics evaluated using the Lagrangian parcels. |
-| `<basename>_alpha_time_step.asc` | ASCII file containing time step estimates for the maximum strain and maximum buoyancy gradient. |
-| `<basename>.csv` | ASCII file containing timings of the individual components of the code. |
-
-> [!NOTE]
-> The frequency of writing to the respective netCDF files is controlled via the construct `output`
-> in the configuration file.
-
-> [!TIP]
-> The command `ncdump` is useful to inspect a netCDF file, i.e.
-> ```bash
-> ncdump filename.nc | less
-> ```
-> where `filename.nc` is a netCDF file.
