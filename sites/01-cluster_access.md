@@ -47,3 +47,6 @@ ssh -X -i ~/.ssh/id_rsa_cirrus tc066-rfga@login.cirrus.ac.uk
 > [!NOTE]
 > More details on how to login can be found [in the Cirrus documentation](https://docs.cirrus.ac.uk/user-guide/connecting/#ssh-clients)
 > and in [this repo](../lessons/00-Connecting.md).
+
+Next: [Setting up the environment](02-setup_environment.md), Previous: [Installing X-Windows](00-xwindow.md), Up: [Main page](../README.md)
+

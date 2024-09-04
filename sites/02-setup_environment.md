@@ -66,3 +66,5 @@ aware of the modules by setting the environment variable
 ```bash
 export PYTHONPATH=$PYTHONPATH:/work/tc066/tc066/$USER/workshop
 ```
+
+Next: [Prepare and run simulation](03-moist_bubble.md), Previous: [Accessing the Cirrus cluster](01-cluster_access.md), Up: [Main page](../README.md)

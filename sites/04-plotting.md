@@ -114,3 +114,5 @@ display xz-buoyancy-cross_section.png
 
 ![Cross sections through the centre of the y-axis.](../figures/xz-buoyancy-cross_section.png
 "Cross sections through the centre of the y-axis.")
+
+Previous: [Prepare and run simulation](03-moist_bubble.md), Up: [Main page](../README.md)

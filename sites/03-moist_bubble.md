@@ -69,3 +69,5 @@ sbatch submit-job.sh
 > ```bash
 > scancel <jobid>
 > ```
+
+Next: [How to analyse output data](04-plotting.md), Previous: [Setting up the environment](02-setup_environment.md), Up: [Main page](../README.md)
