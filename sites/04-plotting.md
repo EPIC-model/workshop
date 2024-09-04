@@ -1,3 +1,5 @@
+Previous: [Prepare and run simulation](03-moist_bubble.md), Up: [Main page](../README.md)
+
 # How to analyse output data
 EPIC writes the following files, where `<basename>` is to be replaced by the character
 string that is passed to EPIC via the argument `output%basename` in the configuration file:
