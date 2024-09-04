@@ -11,4 +11,4 @@ help you in case you face any issues regarding code compilation (not necessarily
 - [Installing X-Window server](sites/00-xwindow.md)
 - [Accessing the Cirrus cluster](sites/01-cluster_access.md)
 - [Setting up the environment](sites/02-setup_environment.md)
-- [Moist bubble test case](sites/03-moist_bubble.md)
+- [Prepare and run the moist bubble test case](sites/03-moist_bubble.md)
