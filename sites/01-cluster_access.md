@@ -1,3 +1,5 @@
+Next: [Setting up the environment](02-setup_environment.md), Previous: [Installing X-Windows](00-xwindow.md)
+
 # Accessing the Cirrus cluster
 
 Detailed information about the Cirrus cluster can be found in the [Cirrus website](https://www.cirrus.ac.uk/about/hardware.html) and in [this repo](../lessons/01-Cirrus.md).
