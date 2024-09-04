@@ -1,4 +1,4 @@
-Next: [Cluster access](01-cluster_access.md), Previous: [Main page](../README.md), Up: [Main page](../README.md)
+Next: [Accessing the Cirrus cluster](01-cluster_access.md), Previous: [Main page](../README.md), Up: [Main page](../README.md)
 
 # Installing X-Windows
 
