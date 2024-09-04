@@ -1,7 +1,6 @@
 # Moist bubble test case
  - [How to prepare a simulation](#how-to-prepare-a-simulation)
-  - [How to run a simulation](#how-to-run-a-simulation)
-  - [How to analyse output data](#how-to-analyse-output-data)
+ - [How to run a simulation](#how-to-run-a-simulation)
 
 In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$
 distribution inside the moist bubble are given by
