@@ -1,4 +1,4 @@
-Next: [Prepare and run simulation](03-moist_bubble.md), Previous: [Cluster access](01-cluster_access.md), Up: [Main page](../README.md)
+Next: [Prepare and run simulation](03-moist_bubble.md), Previous: [Accessing the Cirrus cluster](01-cluster_access.md), Up: [Main page](../README.md)
 
 # Setting up the environment
 - [Obtaining all resources](#obtaining-all-resources)
