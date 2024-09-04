@@ -1,10 +1,7 @@
 Next: [How to analyse output data](04-plotting.md), Previous: [Setting up the environment](02-setup_environment.md), Up: [Main page](../README.md)
 
-# Moist bubble test case
- - [How to prepare a simulation](#how-to-prepare-a-simulation)
- - [How to run a simulation](#how-to-run-a-simulation)
-
-In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$
+# How to prepare a simulation
+In this workshop we simulate a rising moist bubble. The liquid-water buoyancy $b_l$ and the specific humidity $q$
 distribution inside the moist bubble are given by
 ```math
 \begin{align}
@@ -31,7 +28,15 @@ and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius
 For further information about the example, read section 3.4 in
 [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
 
-### How to prepare a simulation
+We provide you with a Python script that creates the gridded input fields. After following the instructions on
+[how to load the Python virtual environment](02-setup_environment.md#how-to-load-the-python-virtual-environment),
+you can run the script
+[input/write_moist_setup.py](../input/write_moist_setup.py) which creates a file called
+`moist_<nx>x<ny>x<nz>.nc`, where `<nx>`, `<ny>` and `<nz>` are replaced
+by the number of grid cells per dimension (default: `nx = ny = nz = 64`). You can call the script
+with the `--help` argument to get further information.
+
+# How to run a simulation
 The basic command to run a three-dimensional EPIC simulation is
 ```
 epic3d --config <file.config>
@@ -41,16 +46,9 @@ The configuration file for the moist bubble test case is already given in [input
 
 The argument `field_file` which is currently set to `'moist_64x64x64.nc'` points to a netCDF file
 which contains the initial gridded input data as well as domain specifications and
-physical quantities. In this course, we use Python scripts to generate such input files.
-After following the instructions on
-[how to load the Python virtual environment](#how-to-load-the-python-virtual-environment),
-you can run the script
-[input/write_moist_setup.py](../input/write_moist_setup.py) which creates a file called
-`moist_<nx>x<ny>x<nz>.nc`, where `<nx>`, `<ny>` and `<nz>` are replaced
-by the number of grid cells per dimension (default: `nx = ny = nz = 64`). You can call the script
-with the `--help` argument to get further information.
+physical quantities.
 
-### How to run a simulation
+
 Cirrus uses the SLURM job scheduling system. To run a simulation please use the provided
 [batch script](../input/submit-job.sh). A job is submitted with
 ```bash
