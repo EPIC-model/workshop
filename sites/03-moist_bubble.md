@@ -1,10 +1,7 @@
 Next: [How to analyse output data](04-plotting.md), Previous: [Setting up the environment](02-setup_environment.md), Up: [Main page](../README.md)
 
-# Moist bubble test case
- - [How to prepare a simulation](#how-to-prepare-a-simulation)
- - [How to run a simulation](#how-to-run-a-simulation)
-
-In this example, the liquid-water buoyancy $b_l$ and the specific humidity $q$
+# How to prepare a simulation
+In this workshop we simulate a rising moist bubble. The liquid-water buoyancy $b_l$ and the specific humidity $q$
 distribution inside the moist bubble are given by
 ```math
 \begin{align}
