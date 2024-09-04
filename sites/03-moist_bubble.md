@@ -1,3 +1,5 @@
+Next: [Plotting](04-plotting.md), Previous: [Setting up the environment](02-setup_environment.md), Up: [Main page](../README.md)
+
 # Moist bubble test case
  - [How to prepare a simulation](#how-to-prepare-a-simulation)
  - [How to run a simulation](#how-to-run-a-simulation)
