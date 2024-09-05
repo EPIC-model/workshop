@@ -6,16 +6,12 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=36
 #SBATCH --cpus-per-task=1
-#SBATCH --account=d185
+#SBATCH --account=tc066
 #SBATCH --partition=standard
 #SBATCH --qos=short
 
 # Load the EPIC environment:
-module use /work/d185/d185/shared/modules
-module load gcc/10.2.0
-module load openmpi/4.1.6
-module load hdf5-epic
-module load netcdf-epic
+module use /work/tc066/tc066/shared/modules
 module load epic
 
 # Change to the submission directory:

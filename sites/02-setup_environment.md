@@ -19,17 +19,23 @@ git clone https://github.com/EPIC-model/workshop.git
 ***
 
 ## How to load the EPIC environment
+
 In order to simplify your task, we have pre-installed a working EPIC executable.
 After logging into Cirrus, you can load the environment with the following commands:
 
 ```bash
 module use /work/tc066/tc066/shared/modules
-module load gcc/10.2.0
-module load openmpi/4.1.6
-module load hdf5-epic
-module load netcdf-epic
 module load epic
-module load ImageMagick
+```
+
+The `epic` module will automatically load all the other required modules (`gcc`, `mpi`, `hdf5`, and `netcdf`).
+You can confirm which modules you have loaded with the `module list` command:
+
+```bash
+tc066-rfga@cirrus-login2:~$ module list
+Currently Loaded Modulefiles:
+ 1) git/2.37.3   3) /mnt/lustre/e1000/home/y07/shared/cirrus-modulefiles/epcc/setup-env   5) gcc/10.2.0(default)      7) hdf5-epic     9) epic
+ 2) epcc/utils   4) htop/3.2.1                                                            6) openmpi/4.1.6(default)   8) netcdf-epic
 ```
 
 If you would like to test the installation of EPIC, you can try out this [build script](../build-epic.sh).
@@ -40,14 +46,22 @@ To inspect the netCDF output files while a simulation is running, you can additi
 ```bash
 module load ncview-epic
 ```
+
+To open an image file, load the ImageMagick module, and use the `display` command.
+
+```bash
+module load ImageMagick
+```
+
 > [!NOTE]
-> You must be logged in with the flag `-X` in order to run ncview.
+> Your ssh connection must have been made with the flag `-X` in order to run `ncview` or ImageMagick's `display`.
 
 ***
 
 ## How to load the Python virtual environment
 You can prepare the input to EPIC and analyse its output using our tools written in Python.
 For this purpose, you first need to load the virtual environment by typing the subsequent commands:
+
 ```bash
 module load python/3.9.13
 CONDA_ROOT=/work/tc066/tc066/shared/condaenvs
@@ -55,14 +69,16 @@ export CONDARC=${CONDA_ROOT}/.condarc
 eval "$(conda shell.bash hook)"
 conda activate epic-venv
 ```
+
 > [!NOTE]
-> The first four steps must be performed every time you log into the system.
+> The first five steps must be performed every time you log into the system.
 >
 > You can restore the original prompt by running ```conda deactivate``` twice.
 
 The directory ```tools``` contains Python scripts that enable you to generate input data
 and analyse the output data. To use these scripts, you  must make the Python interpreter
 aware of the modules by setting the environment variable
+
 ```bash
 export PYTHONPATH=$PYTHONPATH:/work/tc066/tc066/$USER/workshop
 ```
