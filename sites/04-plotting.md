@@ -40,9 +40,11 @@ Information how to use these scripts is printed when running with the flag `--he
 
 > [!TIP]
 > We suggest that you append the plotting directory to the `$PATH` environment variable with
+> > 
 > ```bash
 > export PATH=$PATH:/work/tc066/tc066/$USER/workshop/plotting
 > ```
+> 
 > in order to facilitate the usage of the plotting scripts. After this operation you can, for example, simply
 > type `plot_cross_sections.py --help` from any directory and without prefixing the Python interpreter.
 
@@ -61,17 +63,18 @@ which gives you this plot:
 You can open the image with:
 
 ```bash
-display <plane>-intersected_ellipses_<loc>_<dataset>.png
+display <plane>-intersected_ellipses_location_<loc>_<dataset>.png
 # for example, the image above is
-display xy-intersected_ellipses_32_buoyamcy.png
+display xz-intersected_ellipses_location_32_buoyancy.png
 ```
 
 # Plotting with xarray
 
 Alternatively, you can use the package [xarray](https://docs.xarray.dev/en/stable/user-guide/io.html) to visualize the data.
->
+
 > [!NOTE]
 > When loading the `pandas` package two warnings are thrown regarding the version of the packages `numexpr` and `bottleneck`. To suppress these warnings, you can use
+> 
 > ```Python
 > import warnings
 > warnings.filterwarnings("ignore", module='pandas')
@@ -83,10 +86,12 @@ The following code snippet creates a cross section plot of the gridded buoyancy 
 import warnings
 warnings.filterwarnings("ignore", module='pandas')
 
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import colorcet as cc
 import xarray as xr
 
+mpl.use("agg", force=True)
 
 da = xr.open_dataset("moist_fields.nc")
 
