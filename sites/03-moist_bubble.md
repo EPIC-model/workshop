@@ -36,7 +36,7 @@ We provide you with a Python script that creates the gridded input fields. After
 you can run the script [input/write_moist_setup.py](../input/write_moist_setup.py) using the following command:
 
 ```bash
-python3 write_moist_setup.py
+python write_moist_setup.py
 ```
 
 which creates a file called `moist_<nx>x<ny>x<nz>.nc`, where `<nx>`, `<ny>` and `<nz>` are replaced by the number of grid cells per dimension (default: `nx = ny = nz = 64`).
