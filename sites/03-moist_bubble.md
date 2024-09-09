@@ -32,6 +32,8 @@ and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius
 
 ![Cross section of the liquid water buoyancy (left panel) and specific humidity (centre panel). The right panel shows the basic-state stratification profile.[^1]](../figures/qj3319-fig-0002-m.jpg)
 
+Above figure is taken from [Dritschel et al (2018)](https://doi.org/10.1002/qj.3319).
+
 [^1]: Dritschel D G, Böing S J, Parker D J, Blyth A M. The moist parcel-in-cell method for modelling moist convection. Q J R Meteorol Soc. 2018; 144:1695–1718. https://doi.org/10.1002/qj.3319.
 
 For further information about the example, read section 3.4 in [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
