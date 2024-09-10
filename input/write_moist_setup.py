@@ -96,7 +96,6 @@ try:
     q0 = args.q0
     theta_0 = args.theta0
     ncells = args.ncells
-    n_par_res = 2  # how many parcels per grid box in each dimension
     g = args.g
     Lv = args.Lv
     cp = args.cp
