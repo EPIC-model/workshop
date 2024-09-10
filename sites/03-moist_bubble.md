@@ -28,17 +28,12 @@ S(h) =
 \right.
 ```
 
-and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$.
+and $h\equiv(\|\vec{x}'\|/R-f_s)/(1-f_s)$, we choose $f_s=0.8$ and bubble radius $R = 800$. In the figure below you can see a cross section of the initial liquid buoyancy (left panel)
+and specific humidity (centre panel). The right panel of the figure shows the basic state stratification. This figure is taken from [Dritschel et al (2018)](https://doi.org/10.1002/qj.3319).
+![](../figures/qj3319-fig-0002-m.jpg)
+For further information about the example, see also section 3.4 in [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
 
-![Cross section of the liquid water buoyancy (left panel) and specific humidity (centre panel). The right panel shows the basic-state stratification profile.[^1]](../figures/qj3319-fig-0002-m.jpg)
-
-Above figure is taken from [Dritschel et al (2018)](https://doi.org/10.1002/qj.3319).
-
-[^1]: Dritschel D G, Böing S J, Parker D J, Blyth A M. The moist parcel-in-cell method for modelling moist convection. Q J R Meteorol Soc. 2018; 144:1695–1718. https://doi.org/10.1002/qj.3319.
-
-For further information about the example, read section 3.4 in [Frey et al (2023)](https://doi.org/10.1016/j.jcpx.2023.100136).
-
-We provide you with a Python script that creates the gridded input fields. After following the instructions on
+We provide you with a Python script that creates the gridded input fields for this setup. After following the instructions on
 [how to load the Python virtual environment](02-setup_environment.md#how-to-load-the-python-virtual-environment),
 you can run the script [input/write_moist_setup.py](../input/write_moist_setup.py) using the following command:
 
