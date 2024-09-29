@@ -32,6 +32,12 @@ try:
         help="Radius of spherical thermal [m]")
 
     parser.add_argument(
+        "--zb",
+        type=float,
+        default = 2400.0,
+        help="Height of mixed layer.")
+
+    parser.add_argument(
         "--zc",
         type=float,
         default = 2500.0,
@@ -79,6 +85,11 @@ try:
         default=1000.0,
         help="Specific heat (default: 1000)")
 
+    parser.add_argument(
+        "--RH",
+        type=float,
+        default=0.8,
+        help="Relative humidity of environment [-]")
 
     # -------------------------------------------------------------------------
     # Read parser arguments:
@@ -86,9 +97,9 @@ try:
     args = parser.parse_args()
 
     # should eventually read these from namelist?
-    RH = 0.8
+    RH = args.RH
     zc = args.zc
-    mu = 0.9
+    zb = args.zb
     zd = args.zd
     zm = args.zm
     rth = args.rth
@@ -108,7 +119,7 @@ try:
     print("Scale height:                                     ", height_c)
     print("Relative humidity:                                ", RH)
     print("Condensation level, zc:                           ", zc)
-    print("Specific humdity ratio, mu = qenv / qth:          ", mu)
+    print("Height of the top of the mixed layer, zb:         ", zb)
     print("Level of dry neutral stratification, zd:          ", zd)
     print("Level of moist neutral stratification, zm:        ", zm)
     print("Radius of spherical thermal, rth:                 ", rth)
@@ -168,12 +179,15 @@ try:
     qth = q0 * np.exp(-zc / height_c)
 
     # Specific humidity fraction outside thermal
+    mu = (q0 * RH) / (qth * np.exp(zb / height_c))
+    
     qenv = mu * qth
 
-    if (mu > 1.0) or (mu <= RH):
-        raise ValueError("mu must be between H and 1. The selected value is " + str(mu))
+    if (mu > 1.0):
+        print("Warning: mu above 1 implies thermal drier than environment. The selected value is " + str(mu))
 
-    zb = height_c * np.log(q0 * RH / qenv)
+    if (mu <= RH):
+        print("Warning: mu must be above RH to avoid saturation in mixed layer. The selected value is " + str(mu))
 
     # Latent buoyancy, equation 30
     bm = g * Lv * q0  / (cp * theta_0)
@@ -203,7 +217,7 @@ try:
     print("--------------------------------------------------------------------")
     print("Specific humidity fraction inside thermal, qth:   ", qth)
     print("Specific humidity fraction outside thermal, qenv: ", qenv)
-    print("Height of the top of the mixed layer, zb:         ", zb)
+    print("Specific humdity ratio, mu = qenv / qth:          ", mu)
     print("Buoyancy frequency in the stratified zone, N:     ", np.sqrt(dbdz))
     print("Latent buoyancy:                                  ", bm)
     print("Thermal liquid water buoyancy:                    ", b_pl)
