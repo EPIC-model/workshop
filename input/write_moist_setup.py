@@ -34,7 +34,7 @@ try:
     parser.add_argument(
         "--zb",
         type=float,
-        default = 2400.0,
+        default = 2382.216964343617,
         help="Height of mixed layer.")
 
     parser.add_argument(
